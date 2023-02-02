@@ -1,3 +1,51 @@
-.title{
+*{
+    font-weight: 300;
     font-family: Poppins;
+    margin: 0px;
+    padding: 0px;
+}
+#login_page{
+    position: fixed;
+    position: relative;
+    overflow: hidden;
+}
+#login_background{
+    width: 100%;
+    z-index: -100;
+}
+.title{
+    color: white;
+    position: absolute;
+    margin-left: 5%;
+    font-size: 90px;
+    font-weight: 500;
+    top: 900px;
+}
+#login_page_h3{
+    margin-top: 130px;
+    font-weight: 300;
+    font-size: 52px;
+}
+.login_insert{
+    font-weight: 400;
+    position: absolute;
+    top: 1400px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 8%;
+    width: 80%;
+    height:100px;
+    border: none;
+    border-radius: 50px;
+    opacity: 75%;
+    font-size: 45px;
+    padding-left: 4%;
+    color: #CE9C52;
+    box-shadow: 0 , 0 , 0 ;
+}
+.login_insert ::placeholder{
+    color: #CE9C52;
+}
+#login_password{
+    margin-top: 170px;
 }
