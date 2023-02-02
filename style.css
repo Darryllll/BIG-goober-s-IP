@@ -5,9 +5,7 @@
     padding: 0px;
 }
 #login_page{
-    position: fixed;
     position: relative;
-    overflow: hidden;
 }
 #login_background{
     width: 100%;
@@ -20,7 +18,9 @@
     font-size: 90px;
     font-weight: 500;
     top: 900px;
+    text-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
 }
+
 #login_page_h3{
     margin-top: 130px;
     font-weight: 300;
@@ -29,7 +29,7 @@
 .login_insert{
     font-weight: 400;
     position: absolute;
-    top: 1400px;
+    top: 1300px;
     display: flex;
     margin-bottom: 20px;
     margin-left: 8%;
@@ -41,11 +41,33 @@
     font-size: 45px;
     padding-left: 4%;
     color: #CE9C52;
-    box-shadow: 0 , 0 , 0 ;
+    box-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
 }
 .login_insert ::placeholder{
     color: #CE9C52;
 }
 #login_password{
     margin-top: 170px;
+}
+
+.login_login_button{
+    cursor: pointer;
+    position: absolute;
+    width: 45%;
+    top: 1700px;
+    height: 100px;
+    margin-left: 27.5%;
+    font-size: 60px;
+    font-weight: 400;
+    border-radius: 50px;
+    border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;
+    background-color: #FCD288;
+    color: #FFFFFF;
+    box-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
+}
+.login_or{
+    position: absolute;
+    top: 1900px;
 }
