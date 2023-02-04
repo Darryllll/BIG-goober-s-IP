@@ -15,30 +15,29 @@
     color: white;
     position: absolute;
     margin-left: 5%;
-    font-size: 90px;
-    font-weight: 500;
-    top: 900px;
+    font-size: 40px;
+    font-weight: 550;
+    top: 40%;
     text-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
 }
 
 #login_page_h3{
-    margin-top: 130px;
+    margin-top: 12%;
     font-weight: 300;
-    font-size: 52px;
+    font-size: 25px;
 }
 .login_insert{
     font-weight: 400;
-    position: absolute;
-    top: 1225px;
+    position:absolute;
+    top: 53%;
     display: flex;
-    margin-bottom: 20px;
     margin-left: 8%;
     width: 78%;
-    height:100px;
+    height:5%;
     border: none;
     border-radius: 50px;
     opacity: 75%;
-    font-size: 45px;
+    font-size: 20px;
     padding-left: 8%;
     color: #CE9C52;
     box-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
@@ -46,21 +45,21 @@
 .login_insert ::placeholder{
     color: #CE9C52;
 }
-#login_password{
-    margin-top: 170px;
+#login-password{
+    margin-top: 15%;
 }
 
 .login_login_button{
     cursor: pointer;
     position: absolute;
-    width: 45%;
-    top: 1600px;
-    height: 100px;
-    margin-left: 27.5%;
-    font-size: 60px;
+    width: 40%;
+    top: 68%;
+    height: 5%;
+    margin-left: 31%;
+    font-size: 30px;
     font-weight: 400;
     border-radius: 50px;
-    border-width: 10px;
+    border-width: 2px;
     border-color: #FFFFFF;
     border-style: solid;
     background-color: #FCD288;
@@ -70,13 +69,13 @@
 .login_or{
     position: absolute;
     display: flex;
-    top: 1770px;
+    top: 76%;
     width: 100%;
 }
 .login_rectangle{
     background-color: #FFFFFF;
     width: 35%;
-    height: 8px;
+    height: 3px;
     margin-right: 3%;
     margin-left: 9%;
     box-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
@@ -84,9 +83,9 @@
 
 #login_or{
     position: absolute;
-    top: 1730px;
-    margin-left: 47.5%;
-    font-size: 54px;
+    top: 74%;
+    margin-left: 47%;
+    font-size: 25px;
     font-weight: 400;
     color: #FFFFFF;
     margin-bottom: 10px;
@@ -94,18 +93,22 @@
 }
 .login_SignUp{
     position: absolute;
-    top: 1850px;
-    width: 34%;
-    height: 100px;
-    margin-left: 33%;
-    font-size: 52px;
+    top: 80%;
+    width: 30%;
+    height: 40px;
+    margin-left: 35%;
+    font-size: 25px;
     font-weight: 400;
     border-radius: 50px;
-    border-width: 10px;
+    border-width: 2px;
     border-color: #FFFFFF;
     border-style: solid;
     background-color: #FCD288;
     color: #FFFFFF;
     box-shadow: -5px 5px 0 rgba(0, 0, 0, .2);
 
+}
+.forget{
+    position: absolute;
+    top: 88%;
 }
