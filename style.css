@@ -4,27 +4,37 @@
     margin: 0px;
     padding: 0px;
 }
+
+/* ! ! ! login page ! ! ! */
 #login_page{
-    position: fixed;
+    \\position: fixed;
 }
 #login_background{
     width: 100%;
     z-index: -100;
 }
-.title{
-    color: white;
+#login_logo{
     position: absolute;
-    margin-left: 6%;
-    font-size: 30px;
-    font-weight: 550;
-    top: 40%;
-    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-}
+    width: 70%;
+    z-index: -99;
+    top: 10%;
 
+}
+.title{
+    color: rgba(0, 0, 0, .7);
+    mix-blend-mode: multiply;
+    position: absolute;
+    margin-left: 8%;
+    font-size: 25px;
+    font-weight: bold;
+    top: 40.5%;
+    /*text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);*/
+}
 #login_page_h3{
-    margin-top: 12%;
-    font-weight: 300;
-    font-size: 20px;
+    margin-top: 11%;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: .6;
 }
 .login_insert{
     font-weight: 400;
@@ -58,12 +68,12 @@
     font-size: 22px;
     font-weight: 400;
     border-radius: 50px;
-    border-width: 2px;
-    border-color: #FFFFFF;
+    border-width: 0px;
     border-style: solid;
-    background-color: #FCD288;
+    background-color: #F4BF6C;
     color: #FFFFFF;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
 .login_or{
     position: absolute;
@@ -79,7 +89,6 @@
     margin-left: 5.5%;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
-
 #login_or{
     position: absolute;
     top: 74%;
@@ -91,6 +100,7 @@
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
 .login_SignUp{
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     position: absolute;
     top: 80%;
     width: 30%;
@@ -99,15 +109,10 @@
     font-size: 17px;
     font-weight: 400;
     border-radius: 50px;
-    border-width: 2px;
-    border-color: #FFFFFF;
-    border-style: solid;
-    background-color: #FCD288;
+    border: none;
+    background-color: #F4BF6C;
     color: #FFFFFF;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 
 }
-.forget{
-    position: absolute;
-    top: 88%;
-}
+/* ! ! ! login page ! ! ! */
