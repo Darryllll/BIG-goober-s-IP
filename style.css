@@ -140,6 +140,54 @@
 }
 #SignUpPage section{
     position: absolute;
-    bottom: 51%;
+    bottom: 40%;
     margin-left: 10%;
+}
+#SignUpPageInst{
+    margin-bottom: 3%;
+    font-weight: 450;
+    opacity: .7;
+    mix-blend-mode: multiply;
+}
+.SignUpPageInput{
+    margin-left: 4%;
+    font-size: 15px;
+}
+.SignUpPageInputSet{
+    margin-bottom: 8%;
+}
+#SignUpPage section div input{
+    background-color: #F9F4E8;
+    border: solid;
+    border-color: #E8AC6B;
+    width: 82%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 50px;
+    padding-left: 5.8%;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    
+}
+#SignUpPage section div input ::shadow{
+    mix-blend-mode: multiply;
+}
+#SignUpPage section button{
+    position: absolute;
+    width: 40%;
+    height: 15%;
+    border-radius: 90px;
+    background-color: #F4BF6C;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    margin-left: 25%;
+}
+#SignUpPage section div input ::shadow{
+    mix-blend-mode: multiply;
+}
+#SignUpPage section button :active{
+    opacity: .6;
 }
