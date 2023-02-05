@@ -13,13 +13,6 @@
     width: 100%;
     z-index: -100;
 }
-#login_logo{
-    position: absolute;
-    width: 70%;
-    z-index: -99;
-    top: 10%;
-
-}
 .title{
     color: rgba(0, 0, 0, .7);
     mix-blend-mode: multiply;
@@ -116,6 +109,37 @@
 
 }
 /* ! ! ! login page ! ! ! */
-#SignUpBG{
+#SignUpPage{
+    position: fixed;
+}
+.background{
     width: 100%;
+}
+#SignUpBG{
+    margin-left: -.2%;
+}
+.SignUpTitle{
+    position: absolute;
+    bottom: 80%;
+    font-weight: bold;
+    font-size: 26px;
+    margin-left: 17%;
+    mix-blend-mode: multiply;
+    opacity: 70%;
+}
+.SignUpRec{
+    position: absolute;
+    width: 75%;
+    height: .3%;
+    background-color: black;
+    bottom: 79%;
+    margin-left: 12.5%;
+    opacity: .6;
+    mix-blend-mode: multiply;
+
+}
+#SignUpPage section{
+    position: absolute;
+    bottom: 51%;
+    margin-left: 10%;
 }
