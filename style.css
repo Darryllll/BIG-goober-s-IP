@@ -192,3 +192,27 @@
     opacity: .6;
 }
 /* ! ! ! Lobby page ! ! !*/
+.LobbyButtons{
+    position: absolute;
+    bottom: 4.5%;
+    width: 80%;
+    background-color: #F7C68B;
+    height: 33%;
+    margin-left: 10%;
+    border-radius: 10px;
+    opacity: .4;
+    mix-blend-mode: multiply;
+
+}
+.lobbyCol{
+    position: relative;
+    height: 50%;
+    background-color: aqua;
+}
+.lobbyPart{
+    position: relative;
+    height: 50%;
+}
+.LobbyButtons button{
+    
+}
