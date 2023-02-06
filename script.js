@@ -1,8 +1,8 @@
 
 function LoginPage_Login(){
-  console.log("abdwa")
+  
   $(document).ready(function () {
-    console.log("dbuayda")
+    
     const APIKEY = "63de48653bc6b255ed0c464c";
       
       let userName = $("#login-email").val();
@@ -12,7 +12,7 @@ function LoginPage_Login(){
         "email": userName,
         "password": userPass,     
       };
-      console.log("diuaid")
+      
   
       var settings = {
         "async": true,
@@ -27,7 +27,7 @@ function LoginPage_Login(){
         "processData": false,
         "data": JSON.stringify(jsondata)
       }
-      console.log("jad")
+      
       
       
     $.ajax(settings).done(function (response) {
