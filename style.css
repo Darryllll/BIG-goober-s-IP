@@ -197,7 +197,7 @@
     bottom: 4.5%;
     width: 80%;
     background-color: #F7C68B;
-    height: 33%;
+    height: 36%;
     margin-left: 10%;
     border-radius: 10px;
     opacity: .4;
@@ -205,14 +205,21 @@
 
 }
 .lobbyCol{
+    display: flex;
     position: relative;
     height: 50%;
-    background-color: aqua;
 }
 .lobbyPart{
     position: relative;
-    height: 50%;
+    height: 100%;
+    width: 50%;
 }
 .LobbyButtons button{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    margin-left: 10%;
+    margin-top: 10%;
     
 }
