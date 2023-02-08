@@ -326,16 +326,20 @@
     text-align: right;
 }
 #LobbyMoneyNum{
-    margin-left: 13%;
+    position: relative;
     font-weight: 450;
     opacity: .7;
     mix-blend-mode: multiply;
-    text-align: center;
+    text-align: right;
+    margin-left: -19%;
+    mix-blend-mode: multiply;
+    opacity: .7;
 }
 #LobbyCoin{
     position: absolute;
     width: 23%;
-    margin-left: 23%;
+    margin-left: -45%;
+    background: none;
 }
 #LobbyMoneyBG{
     position: absolute;
@@ -346,4 +350,14 @@
     filter: brightness(115%);
     border-radius: 7px;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+}
+/* Community Page!! */
+#CommBGTop{
+    position: absolute;
+    height: 12%;
+}
+#CommBGBottom{
+    position: absolute;
+    height: 7%;
+    bottom: 0%;
 }
