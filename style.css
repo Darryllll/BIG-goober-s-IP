@@ -218,5 +218,24 @@
     background-color: black;
     margin-left: 10%;
     margin-top: 10%;
-    
+    border: none;
+}
+.LobbySeason{
+    position: absolute;
+    bottom: 43%;
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 50px;
+    border: none;
+    background-color: #EDAE62;
+    font-weight: 450;
+    font-size: 16px;
+    color: white;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+}
+.LobbySeason ::shadow{
+    mix-blend-mode: multiply;
 }
