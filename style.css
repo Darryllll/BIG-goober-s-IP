@@ -290,9 +290,36 @@
     border-radius: 10px;
     color: #FFFFFF;
 }
-.LobbyInven p{
+.LobbyInven div{
+    margin-top: 8.5%;
+}
+.LobbyInven div p{
     position: relative;
     display: flex;
     margin-bottom: 10%;
-
+    margin-left: 7%;
+    font-size: 20px;
+    font-weight: 450;
+}
+#LobbyInven1{
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+#LobbyInven2{
+    margin-bottom: 0%;
+    font-size: 14px;
+    font-weight: 300;
+}
+#LobbyInven3{
+    font-weight: 390;
+    margin-left: 8%;
+}
+.LobbyMoney{
+    position: absolute;
+    background-color: aqua;
+    bottom: 93%;
+    width: 25%;
+    height: 5%;
+    margin-left: 70%;
+    
 }
