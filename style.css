@@ -355,9 +355,11 @@
 #CommBGTop{
     position: absolute;
     height: 12%;
+    position: fixed;
 }
 #CommBGBottom{
     position: absolute;
     height: 7%;
     bottom: 0%;
+    position: fixed;
 }
