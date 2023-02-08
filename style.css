@@ -215,10 +215,23 @@
     position: relative;
     width: 80%;
     height: 80%;
-    background-color: black;
     margin-left: 10%;
     margin-top: 10%;
+    background:none;
     border: none;
+    cursor: pointer;
+    z-index: 90;
+}
+.LobbyButtons button img{
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    mix-blend-mode: normal;
+}
+.LobbyButtons button p{
+    font-weight: 450;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
 }
 .LobbySeason{
     position: absolute;
@@ -238,4 +251,17 @@
 }
 .LobbySeason ::shadow{
     mix-blend-mode: multiply;
+}
+.LobbyInven{
+    position: absolute;
+    bottom: 59%;
+    height: 30%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: black;
+    opacity: .4;
+    mix-blend-mode: multiply;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
 }
