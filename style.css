@@ -193,12 +193,21 @@
     position: absolute;
     bottom: 4.5%;
     width: 80%;
-    background-color: #F7C68B;
+    background: none;
     height: 36%;
     margin-left: 10%;
     border-radius: 10px;
-    opacity: 1;
-
+}
+.LobbyButtonsBG{
+    position: absolute;
+    bottom: 1.8%;
+    width: 82%;
+    background-color: #F7C68B;
+    height: 39%;
+    margin-left: 9%;
+    border-radius: 10px;
+    opacity: .4;
+    mix-blend-mode: multiply;
 }
 .lobbyCol{
     display: flex;
@@ -212,7 +221,7 @@
 }
 .LobbyButtons button{
     position: relative;
-    width: 80%;
+    width: 90%;
     height: 80%;
     margin-left: 10%;
     margin-top: 10%;
@@ -233,6 +242,21 @@
     font-weight: 450;
     color: #FFFFFF;
     mix-blend-mode: normal;
+}
+#LobbyButton3{
+    margin-top: 1%;
+    width: 75%;
+}
+#LobbyButton1{
+    margin-top: 2%;
+    width: 90%;
+}
+#LobbyButton2{
+    margin-top: 2%;
+    width: 80%;
+}
+#LobbyButton4{
+    width: 60%;
 }
 .LobbySeason{
     position: absolute;
@@ -265,4 +289,10 @@
     border: none;
     border-radius: 10px;
     color: #FFFFFF;
+}
+.LobbyInven p{
+    position: relative;
+    display: flex;
+    margin-bottom: 10%;
+
 }
