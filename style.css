@@ -315,11 +315,36 @@
     margin-left: 8%;
 }
 .LobbyMoney{
+    display: flex;
     position: absolute;
-    background-color: aqua;
-    bottom: 93%;
-    width: 25%;
+    background:none;
+    bottom: 93.2%;
+    width: 30%;
     height: 5%;
-    margin-left: 70%;
+    margin-left: 80%;
+    align-items: center;
+    text-align: right;
+}
+.LobbyMoney p{
+    margin-left: 13%;
+    font-weight: 450;
+    opacity: .7;
+    mix-blend-mode: multiply;
+    text-align: right;
+}
+#LobbyCoin{
+    position: absolute;
+    width: 23%;
+    margin-left: 23%;
+}
+#LobbyMoneyBG{
+    position: absolute;
+    bottom: 93.5%;
+    width: 30%;
+    height: 4.5%;
+    margin-left: 65%;
+    filter: brightness(115%);
+    border-radius: 7px;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     
 }
