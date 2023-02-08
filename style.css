@@ -325,12 +325,12 @@
     align-items: center;
     text-align: right;
 }
-.LobbyMoney p{
+#LobbyMoneyNum{
     margin-left: 13%;
     font-weight: 450;
     opacity: .7;
     mix-blend-mode: multiply;
-    text-align: right;
+    text-align: center;
 }
 #LobbyCoin{
     position: absolute;
@@ -346,5 +346,4 @@
     filter: brightness(115%);
     border-radius: 7px;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-    
 }
