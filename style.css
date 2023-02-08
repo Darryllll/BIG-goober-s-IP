@@ -197,8 +197,7 @@
     height: 36%;
     margin-left: 10%;
     border-radius: 10px;
-    opacity: .4;
-    mix-blend-mode: multiply;
+    opacity: 1;
 
 }
 .lobbyCol{
@@ -221,6 +220,8 @@
     border: none;
     cursor: pointer;
     z-index: 90;
+    opacity: 1;
+    mix-blend-mode: normal;
 }
 .LobbyButtons button img{
     position: relative;
