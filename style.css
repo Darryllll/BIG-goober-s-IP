@@ -8,6 +8,19 @@
     width: 100%;
     position: fixed;
 }
+.back{
+    position: absolute;
+    background: none;
+    width: 13%;
+    height: 6.5%;
+    top: .4%;
+    margin-left: 2%;
+    border: none;
+    cursor: pointer;
+}
+.back img{
+    width: 100%;
+}
 /* ! ! ! login page ! ! ! */
 #login_page{
     \\position: fixed;
@@ -370,7 +383,7 @@
 .CommsAdd{
     position: absolute;
     width: 15%;
-    bottom: 1%;
+    bottom: .9%;
     height: 5.5%;
     border: none;
     margin-left: 42.5%;
@@ -383,4 +396,9 @@
     background: none;
     width: 65%;
     margin-top: 5%;
+    height: 90%;
+}
+.commContent{
+    position: absolute;
+    bottom: 74%;
 }
