@@ -356,10 +356,31 @@
     position: absolute;
     height: 12%;
     position: fixed;
+    width: 100%;
+    z-index: -100;
 }
 #CommBGBottom{
     position: absolute;
     height: 7%;
     bottom: 0%;
     position: fixed;
+    width: 100%;
+    z-index: -100;
+}
+.CommsAdd{
+    position: absolute;
+    width: 15%;
+    bottom: 1%;
+    height: 5.5%;
+    border: none;
+    margin-left: 42.5%;
+    background-color: #F4BD6C;
+    border-radius: 15%;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+}
+.CommsAdd img{
+    position: relative;
+    background: none;
+    width: 65%;
+    margin-top: 5%;
 }
