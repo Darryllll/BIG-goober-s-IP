@@ -81,7 +81,8 @@
     border-radius: 50px;
     border-width: 0px;
     border-style: solid;
-    background-color: #F4BF6C;
+    background-color: #D69541
+    ;
     color: #FFFFFF;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
@@ -121,7 +122,7 @@
     font-weight: 400;
     border-radius: 50px;
     border: none;
-    background-color: #F4BF6C;
+    background-color: #D69541;
     color: #FFFFFF;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 
@@ -491,7 +492,7 @@ div.fixed {
 .postImg{
     position: absolute;
     margin: 0px;
-    height: 8.2%;
+    height: 8.6%;
     margin-top: 7%;
     width: 20%;
     background-image: url(images/postAdd.png);
