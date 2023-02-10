@@ -1,3 +1,4 @@
+
 *{
     font-weight: 300;
     font-family: Poppins;
@@ -203,6 +204,10 @@
 }
 #SignUpPage section button :active{
     opacity: .6;
+}
+
+.modal-footer{
+    height: 20%;
 }
 /* ! ! ! Lobby page ! ! !*/
 .LobbyButtons{
