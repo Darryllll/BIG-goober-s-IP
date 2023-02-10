@@ -527,7 +527,7 @@ div.fixed {
     margin-right: 20%;
     border-radius: 100px;
     border: none;
-    background-image: url(images/postSubmit.png);
+    background-color: #D69541;
     background-size: cover;
     color: white;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
