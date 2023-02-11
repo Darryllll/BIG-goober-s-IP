@@ -6,6 +6,8 @@
     <title>Sign up to Motif</title>
     <link rel="icon" type="image/png" href="images/logo.png"/>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="custom.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
@@ -32,7 +34,7 @@
                         <input id ="signUp-Password" type="password">
                     </div>
                 </div> 
-                <button onclick="submitButton()">Submit</button>
+                <button onclick="submitButton()" type="submit" class="btn btn-primary">Submit</button>
                 <a href="LoginPage.html"></a>
                 <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -52,7 +54,6 @@
             </section>
             <script src="script.js" defer></script>
             <script src="/jquery-3.6.3.js"></script>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     </body>

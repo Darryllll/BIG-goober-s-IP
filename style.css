@@ -206,8 +206,11 @@
     opacity: .6;
 }
 
+.btn-secondary{
+    width:20%
+}
 .modal-footer{
-    height: 20%;
+    padding:1.8rem
 }
 /* ! ! ! Lobby page ! ! !*/
 .LobbyButtons{

@@ -1,5 +1,5 @@
 
-/*function LoginPage_Login(){
+function LoginPage_Login(){
   
   $(document).ready(function () {
     
@@ -36,11 +36,11 @@
     
     })
   });
-};*/
+};
 
 
 //for the sign up page
-function submitButton(){
+function submitButton() {
   $(document).ready(function () {
     const APIKEY = "63de48653bc6b255ed0c464c";
     let userName = $("#signUp-Email").val();
@@ -66,7 +66,7 @@ function submitButton(){
       "processData": false,
       "data": JSON.stringify(jsondata)
     }
-  
+    
     $.ajax(settings).done(function (response) {
       let emailTaken = false;
       let usernameTaken = false;
@@ -82,7 +82,7 @@ function submitButton(){
           break;
         }
       }
-  
+      
       if (emailTaken) {
         $("#errorModal .modal-body").html("Error: email is already taken");
         $("#errorModal").modal("show");
@@ -104,17 +104,25 @@ function submitButton(){
         "headers": {
           "content-type": "application/json",
           "x-apikey": APIKEY,
-          "cache-control": "no-cache"},
+          "cache-control": "no-cache"
+        },
         "processData": false,
         "data": JSON.stringify(jsondata)
       }
   
       $.ajax(postSettings).done(function (postResponse) {
         console.log(postResponse);
+        $("#submitButton").prop("disabled", false);
+        window.location.href = "LoginPage.html";
+      }).fail(function() {
+        $("#errorModal .modal-body").html("Error: sign-up failed");
+        $("#errorModal").modal("show");
+        
       });
     });
   });
 };
+
 
 
 
