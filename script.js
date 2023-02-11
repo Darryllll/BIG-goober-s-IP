@@ -1,42 +1,193 @@
 
-function LoginPage_Login(){
-  
+
+/*function LoginPage_Login() {
   $(document).ready(function () {
-    
     const APIKEY = "63de48653bc6b255ed0c464c";
-      
-      let userName = $("#login-email").val();
-      let userPass = $("#login-password").val();
+
+    let userName = $("#login-email").val();
+    let userPass = $("#login-password").val();
+
+    if (!userName || !userPass) {
+      console.error("Email and password are required.");
+      return;
+    }
+
+    let jsondata = {
+      "email": userName,
+      "password": userPass,
+    };
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://ipproject-81b0.restdb.io/rest/login",
+      "method": "GET",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache",
+      },
+      "processData": false,
+      "data": JSON.stringify(jsondata),
+    };
+
+    $.ajax(settings).done(function (response) {
+      let emailWrong = false;
+      let passWrong = false;
   
-      let jsondata = {
-        "email": userName,
-        "password": userPass,     
-      };
-      
+      for (let i = 0; i < response.length; i++) {
+        if (response[i].email === userName) {
+          emailWrong = true;
+          break;
+        }
   
-      var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://ipproject-81b0.restdb.io/rest/login",
-        "method": "POST",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        },
-        "processData": false,
-        "data": JSON.stringify(jsondata)
+        if (response[i].password === userPass) {
+          passWrong = true;
+          break;
+        }
       }
       
-      
-      
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-    
-    
-    })
+      if (emailWrong) {
+        $("#errorModal .modal-body").html("Error: email is incorrect");
+        $("#errorModal").modal("show");
+        return;
+      }
+  
+      if (passWrong) {
+        $("#errorModal .modal-body").html("Error: Password is incorrect");
+        $("#errorModal").modal("show");
+        return;
+      }
+
+      });
   });
-};
+}*/
+/*function LoginPage_Login() {
+  $(document).ready(function () {
+    const APIKEY = "63de48653bc6b255ed0c464c";
+
+    let userName = $("#login-email").val();
+    let userPass = $("#login-password").val();
+
+    if (!userName || !userPass) {
+      console.error("Email and password are required.");
+      return;
+    }
+
+    let jsondata = {
+      "email": userName,
+      "password": userPass,
+    };
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://ipproject-81b0.restdb.io/rest/login",
+      "method": "GET",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache",
+      },
+      "processData": false,
+      "data": JSON.stringify(jsondata),
+    };
+
+    $.ajax(settings).done(function (response) {
+      let emailWrong = false;
+      let passWrong = false;
+  
+      for (let i = 0; i < response.length; i++) {
+        if (response[i].email !== userName) {
+          emailWrong = true;
+          break;
+        }
+  
+        if (response[i].password !== userPass) {
+          passWrong = true;
+          break;
+        }
+      }
+      
+      if (!emailWrong && !passWrong) {
+      window.location.href = "Lobby.html";
+      } else {
+        if (emailWrong) {
+          $("#errorModal .modal-body").html("Error: Email is incorrect");
+        }
+  
+        if (passWrong) {
+          $("#errorModal .modal-body").html("Error: Password is incorrect");
+        }
+        $("#errorModal").modal("show");
+      
+      }
+    });
+  });
+}*/
+
+function LoginPage_Login() {
+  $(document).ready(function () {
+    const APIKEY = "63de48653bc6b255ed0c464c";
+
+    let userName = $("#login-email").val();
+    let userPass = $("#login-password").val();
+
+    if (!userName || !userPass) {
+      console.error("Email and password are required.");
+      return;
+    }
+
+    let jsondata = {
+      "email": userName,
+      "password": userPass,
+    };
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://ipproject-81b0.restdb.io/rest/login",
+      "method": "GET",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache",
+      },
+      "processData": false,
+      "data": JSON.stringify(jsondata),
+    };
+
+    $.ajax(settings).done(function (response) {
+      let emailWrong = true;
+      let passWrong = true;
+  
+      for (let i = 0; i < response.length; i++) {
+        if (response[i].email === userName) {
+          emailWrong = false;
+        }
+  
+        if (response[i].password === userPass) {
+          passWrong = false;
+        }
+      }
+      
+      if (!emailWrong && !passWrong) {
+        window.location.href = "Lobby.html";
+      } else {
+        let errorMessage = "Error: ";
+        if (emailWrong) {
+          errorMessage += "Email is incorrect";
+        }
+        if (passWrong) {
+          errorMessage += "Password is incorrect";
+        }
+        $("#errorModal .modal-body").html(errorMessage);
+        $("#errorModal").modal("show");
+      }
+    });
+  });
+}
+
 
 
 //for the sign up page
