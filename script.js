@@ -134,7 +134,8 @@ function LoginPage_Login() {
     let userPass = $("#login-password").val();
 
     if (!userName || !userPass) {
-      console.error("Email and password are required.");
+      $("#errorModal .modal-body").html("Email and password are required.");
+      $("#errorModal").modal("show");
       return;
     }
 
