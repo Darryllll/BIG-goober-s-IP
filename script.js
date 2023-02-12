@@ -176,11 +176,8 @@ function LoginPage_Login() {
         window.location.href = "Lobby.html";
       } else {
         let errorMessage = "Error: ";
-        if (emailWrong) {
-          errorMessage += "Email is incorrect";
-        }
-        if (passWrong) {
-          errorMessage += "Password is incorrect";
+        if (emailWrong || passWrong) {
+          errorMessage += "Data is incorrect";
         }
         $("#errorModal .modal-body").html(errorMessage);
         $("#errorModal").modal("show");
@@ -274,6 +271,40 @@ function submitButton() {
     });
   });
 };
+/* for community page*/
+async function postImageAndCaption(image, caption) {
+  const postData = {
+    image: image,
+    caption: caption
+  };
+
+  const response = await fetch("https://ipproject-81b0.restdb.io/rest/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(postData)
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to post image and caption");
+  }
+
+  const postContainer = document.createElement("div");
+  postContainer.className = "post-container";
+
+  const postImage = document.createElement("img");
+  postImage.src = image;
+  postImage.alt = "Post Image";
+  postContainer.appendChild(postImage);
+
+  const postCaption = document.createElement("p");
+  postCaption.className = "post-caption";
+  postCaption.innerText = caption;
+  postContainer.appendChild(postCaption);
+
+  document.body.appendChild(postContainer);
+}
 
 
 

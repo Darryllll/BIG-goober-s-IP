@@ -25,11 +25,9 @@
     width: 100%;
 }
 /* ! ! ! login page ! ! ! */
-#login_page{
-    \\position: fixed;
-}
 #login_background{
     width: 100%;
+    height:100%;
     z-index: -100;
 }
 .title{
@@ -40,10 +38,11 @@
     font-size: 25px;
     font-weight: bold;
     top: 40.5%;
-    /*text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);*/
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
 #login_page_h3{
-    margin-top: 11%;
+    position:absolute;
+    margin-top: 59px;
     font-weight: 400;
     font-size: 18px;
     opacity: .6;
@@ -54,7 +53,7 @@
     top: 53%;
     display: flex;
     margin-left: 6%;
-    width: 70%;
+    width: 440px;
     height:4.5%;
     border: none;
     border-radius: 50px;
@@ -68,7 +67,7 @@
     color: #CE9C52;
 }
 #login-password{
-    margin-top: 15%;
+    margin-top: 75px;
 }
 .login_login_button{
     cursor: pointer;
@@ -128,9 +127,10 @@
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 
 }
+
 /* ! ! ! Sign UP page ! ! ! */
 #SignUpBG{
-    margin-left: -.2%;
+    margin-left: -0.05%;
 }
 .SignUpTitle{
     position: absolute;
@@ -212,6 +212,12 @@
 .modal-footer{
     padding:1.8rem
 }
+.back-button {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 6%;
+  }
 /* ! ! ! Lobby page ! ! !*/
 .LobbyButtons{
     position: absolute;
