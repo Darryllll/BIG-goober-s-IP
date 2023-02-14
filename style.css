@@ -358,7 +358,6 @@
 #LobbyMoneyNum{
     position: relative;
     font-weight: 450;
-    opacity: .7;
     mix-blend-mode: multiply;
     text-align: right;
     margin-left: -19%;
@@ -607,12 +606,14 @@ div.fixed {
     position: relative;
     width: 100%;
 }
+
 /* ! ! Shop Page ! ! */
 .shopBG{
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
+    height: 11%;
 }
 .back img{
     position: relative;
@@ -630,44 +631,51 @@ div.fixed {
     text-align: right;
     z-index: 20;
 }
-#LobbyMoneyNum{
-    position: relative;
-    font-weight: 450;
-    opacity: .7;
-    mix-blend-mode: multiply;
-    text-align: right;
-    margin-left: -19%;
-    mix-blend-mode: multiply;
-    opacity: .7;
-}
-#LobbyCoin{
-    position: absolute;
-    width: 23%;
-    margin-left: -45%;
-    background: none;
-}
-#LobbyMoneyBG{
-    position: fix;
-    top: 50px;
-    bottom: 93.5%;
-    width: 30%;
-    height: 4.5%;
-    margin-left: 65%;
-    filter: brightness(115%);
-    border-radius: 7px;
-    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-    z-index: 10;
-}
 .shopItemRow{
     display: flex;
     width: 100%;
+}
+.shopMoney{
+    display: flex;
+    position: fixed;
+    background:none;
+    bottom: 93.2%;
+    width: 30%;
+    height: 5%;
+    margin-left: 60%;
+    align-items: center;
+    text-align: right;
+    z-index: 15;
+}
+#shopMoneyNum{
+    position: relative;
+    font-weight: 450;
+    mix-blend-mode: multiply;
+    text-align: right;
+    mix-blend-mode: multiply;
+    opacity: .7;
+    margin-left: -85%;
+}
+#shopCoin{
+    position: relative;
+    width: 23%;
+    background: none;
+    margin-left: -35%;
+}
+#shopMoneyBG{
+    position: relative;
+    height: 100%;
+    filter: brightness(115%);
+    border-radius: 7px;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
 #shopEmpty{
     position: relative;
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 70px;
     opacity: 0;
+    z-index: -100;
 }
 .shopItems{
     display: flex;
