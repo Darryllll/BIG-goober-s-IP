@@ -272,11 +272,24 @@ function submitButton() {
   });
 };
 /* for community page*/
-
-
-
-
-
+const imagepost = document.querySelector("imagepost");
+/*var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://ipproject-81b0.restdb.io/rest/login", true);
+xhr.setRequestHeader("x-apikey", "<api-key>");
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var data = JSON.parse(xhr.responseText);
+    for (var i = 0; i < data.length; i++) {
+      var post = data[i];
+      var postHTML = "<div class='post'>" +
+                        "<img class='postImage' src='" + post.image + "'>" +
+                        "<p class='postCaption'>" + post.caption + "</p>" +
+                     "</div>";
+      document.getElementById("postContainer").innerHTML += postHTML;
+    }
+  }
+};
+xhr.send();*/
 /*$.get("api/data", function(data) {
   var commUsername = data.commUsername;
   var commTag = data.commTag;
