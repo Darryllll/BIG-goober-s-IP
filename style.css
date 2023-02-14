@@ -25,8 +25,12 @@
     width: 100%;
 }
 /* ! ! ! login page ! ! ! */
-#login_page{
-    
+
+.loginLogo{
+    position: absolute;
+    width: 10%;
+    margin-left: 31%;
+    top: 19%;
 }
 #login_background{
     z-index: -100;
@@ -37,14 +41,14 @@
     mix-blend-mode: multiply;
     position: absolute;
     margin-left: 9%;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
-    top: 40.5%;
+    top: 30%;
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
 #login_page_h3{
     position:absolute;
-    margin-top: 13%;
+    margin-top: 4%;
     font-weight: 400;
     font-size: 18px;
     opacity: .6;
@@ -55,13 +59,13 @@
     top: 53%;
     display: flex;
     margin-left: 6%;
-    width: 83%;
-    height:4.5%;
+    width: 40%;
+    height: 6%;
     border: none;
     border-radius: 50px;
     opacity: 75%;
     font-size: 16px;
-    padding-left: 7%;
+    padding-left: 2%;
     color: #CE9C52;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
 }
@@ -69,22 +73,21 @@
     color: #CE9C52;
 }
 #login-password{
-    margin-top: 15%;
+    margin-top: 4%;
 }
 .login_login_button{
     cursor: pointer;
     position: absolute;
-    width: 40%;
-    top: 68%;
-    height: 5%;
-    margin-left: 30%;
+    width: 15%;
+    top: 70%;
+    height: 6%;
+    margin-left: 19%;
     font-size: 22px;
     font-weight: 400;
     border-radius: 50px;
     border-width: 0px;
     border-style: solid;
-    background-color: #D69541
-    ;
+    background-color: #D69541;
     color: #FFFFFF;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
@@ -92,34 +95,37 @@
 .login_or{
     position: absolute;
     display: flex;
-    top: 76%;
-    width: 100%;
+    top: 79.25%;
+    width: 45%;
+    margin-left: 4%;
 }
 .login_rectangle{
-    background-color: #FFFFFF;
+    background-color: black;
     width: 40%;
-    height: 1.5px;
+    height: 2px;
     margin-right: 3%;
     margin-left: 5.5%;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    opacity: .6;
 }
 #login_or{
     position: absolute;
-    top: 74%;
-    margin-left: 47%;
+    top: 77.2%;
+    margin-left: 26%;
     font-size: 18px;
     font-weight: 400;
-    color: #FFFFFF;
+    color: black;
     margin-bottom: 10px;
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    opacity: .7;
 }
 .login_SignUp{
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     position: absolute;
-    top: 80%;
-    width: 30%;
+    top: 83%;
+    width: 10%;
     height: 5%;
-    margin-left: 35%;
+    margin-left: 21.5%;
     font-size: 17px;
     font-weight: 400;
     border-radius: 50px;
@@ -127,19 +133,128 @@
     background-color: #D69541;
     color: #FFFFFF;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-
+    cursor: pointer;
 }
-
+@media only screen and (max-width: 600px) {
+    
+        .loginLogo{
+            position: absolute;
+            width: 36%;
+            margin-left: 32%;
+            top: 10%;
+        }
+        #login_background{
+            z-index: -100;
+            position: fixed;
+        }
+        .title{
+            color: rgba(0, 0, 0, .7);
+            mix-blend-mode: multiply;
+            position: absolute;
+            margin-left: 9%;
+            font-size: 25px;
+            font-weight: bold;
+            top: 40.5%;
+            text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        }
+        #login_page_h3{
+            position:absolute;
+            margin-top: 13%;
+            font-weight: 400;
+            font-size: 18px;
+            opacity: .6;
+        }
+        .login_insert{
+            font-weight: 400;
+            position:absolute;
+            top: 53%;
+            display: flex;
+            margin-left: 6%;
+            width: 83%;
+            height:4.5%;
+            border: none;
+            border-radius: 50px;
+            opacity: 75%;
+            font-size: 16px;
+            padding-left: 7%;
+            color: #CE9C52;
+            box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        }
+        .login_insert ::placeholder{
+            color: #CE9C52;
+        }
+        #login-password{
+            margin-top: 15%;
+        }
+        .login_login_button{
+            cursor: pointer;
+            position: absolute;
+            width: 40%;
+            top: 70%;
+            height: 5%;
+            margin-left: 30%;
+            font-size: 22px;
+            font-weight: 400;
+            border-radius: 50px;
+            border-width: 0px;
+            border-style: solid;
+            background-color: #D69541;
+            color: #FFFFFF;
+            box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+            text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        }
+        .login_or{
+            position: absolute;
+            display: flex;
+            top: 79.25%;
+            width: 100%;
+        }
+        .login_rectangle{
+            background-color: #FFFFFF;
+            width: 40%;
+            height: 1.5px;
+            margin-right: 3%;
+            margin-left: 5.5%;
+            box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        }
+        #login_or{
+            position: absolute;
+            top: 77%;
+            margin-left: 47%;
+            font-size: 18px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        }
+        .login_SignUp{
+            text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+            position: absolute;
+            top: 83%;
+            width: 30%;
+            height: 5%;
+            margin-left: 35%;
+            font-size: 17px;
+            font-weight: 400;
+            border-radius: 50px;
+            border: none;
+            background-color: #D69541;
+            color: #FFFFFF;
+            box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+            cursor: pointer;
+        }
+    
+  }
 /* ! ! ! Sign UP page ! ! ! */
 #SignUpBG{
     margin-left: -0.05%;
 }
 .SignUpTitle{
     position: absolute;
-    bottom: 80%;
+    bottom: 73%;
     font-weight: bold;
     font-size: 26px;
-    margin-left: 17%;
+    margin-left: 11%;
     mix-blend-mode: multiply;
     opacity: 70%;
 }
@@ -148,15 +263,14 @@
     width: 75%;
     height: .3%;
     background-color: black;
-    bottom: 79%;
-    margin-left: 12.5%;
+    bottom: 74%;
+    margin-left: 9%;
     opacity: .6;
     mix-blend-mode: multiply;
-
 }
 #SignUpPage section{
     position: absolute;
-    bottom: 35%;
+    bottom: 23%;
     margin-left: 10%;
 }
 #SignUpPageInst{
@@ -167,22 +281,45 @@
 }
 .SignUpPageInput{
     margin-left: 4%;
+    font-size: 12px;
+}
+#SignUpEmail{
     font-size: 15px;
+    margin-bottom: 1%;
+}
+#SignUpUsername{
+    font-size: 15px;
+    margin-bottom: 1%;
+}
+#SignUpPassword{
+    font-size: 15px;
+    margin-bottom: 1%;
 }
 .SignUpPageInputSet{
-    margin-bottom: 8%;
+    margin-bottom: 12%;
+}
+#signUp-Email{
+    margin-left: -5%;
+    font-size: 13px;
+}
+#signUp-Username{
+    font-size: 13px;
+    margin-left: -5%;
+}
+#signUp-Password{
+    margin-left: -5%;
+    font-size: 13px;
 }
 #SignUpPage section div input{
     background-color: #F9F4E8;
     border: solid;
     border-color: #E8AC6B;
-    width: 82%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 50px;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 500px;
     padding-left: 5.8%;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-    
 }
 #SignUpPage section div input ::shadow{
     mix-blend-mode: multiply;
@@ -220,6 +357,119 @@
     left: 2%;
     height: 6%;
   }
+@media only screen and (max-width: 600px) {
+    #SignUpBG{
+        margin-left: -0.05%;
+    }
+    .SignUpTitle{
+        position: absolute;
+        bottom: 73%;
+        font-weight: bold;
+        font-size: 26px;
+        margin-left: 17%;
+        mix-blend-mode: multiply;
+        opacity: 70%;
+    }
+    .SignUpRec{
+        position: absolute;
+        width: 75%;
+        height: .3%;
+        background-color: black;
+        bottom: 74%;
+        margin-left: 12.5%;
+        opacity: .6;
+        mix-blend-mode: multiply;
+    }
+    #SignUpPage section{
+        position: absolute;
+        bottom: 23%;
+        margin-left: 10%;
+    }
+    #SignUpPageInst{
+        margin-bottom: 3%;
+        font-weight: 450;
+        opacity: .7;
+        mix-blend-mode: multiply;
+    }
+    .SignUpPageInput{
+        margin-left: 4%;
+        font-size: 12px;
+    }
+    #SignUpEmail{
+        font-size: 15px;
+        margin-bottom: 1%;
+    }
+    #SignUpUsername{
+        font-size: 15px;
+        margin-bottom: 1%;
+    }
+    #SignUpPassword{
+        font-size: 15px;
+        margin-bottom: 1%;
+    }
+    .SignUpPageInputSet{
+        margin-bottom: 12%;
+    }
+    #signUp-Email{
+        margin-left: -5%;
+        font-size: 13px;
+    }
+    #signUp-Username{
+        font-size: 13px;
+        margin-left: -5%;
+    }
+    #signUp-Password{
+        margin-left: -5%;
+        font-size: 13px;
+    }
+    #SignUpPage section div input{
+        background-color: #F9F4E8;
+        border: solid;
+        border-color: #E8AC6B;
+        width: 100%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 500px;
+        padding-left: 5.8%;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    }
+    #SignUpPage section div input ::shadow{
+        mix-blend-mode: multiply;
+    }
+    #SignUpPage section button{
+        position: absolute;
+        width: 40%;
+        height: 15%;
+        border-radius: 90px;
+        background-color: #D69541;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        margin-left: 25%;
+    }
+    #SignUpPage section div input ::shadow{
+        mix-blend-mode: multiply;
+    }
+    #SignUpPage section button :active{
+        opacity: .6;
+    }
+    
+    .btn-secondary{
+        width:20%
+    }
+    .modal-footer{
+        padding:1.8rem
+    }
+    .back-button {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        height: 6%;
+      }
+}
 /* ! ! ! Lobby page ! ! !*/
 .LobbyButtons{
     position: absolute;
@@ -285,7 +535,7 @@
 }
 #LobbyButton2{
     margin-top: 2%;
-    width: 80%;
+    width: 70%;
 }
 #LobbyButton4{
     width: 60%;
