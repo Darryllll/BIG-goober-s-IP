@@ -272,7 +272,25 @@ function submitButton() {
   });
 };
 /* for community page*/
-async function postImageAndCaption(image, caption) {
+
+
+
+
+
+/*$.get("api/data", function(data) {
+  var commUsername = data.commUsername;
+  var commTag = data.commTag;
+  var commTitle = data.commTitle;
+  var commImage = data.commImage;
+  var commCaption = data.commCaption;
+  
+  $(".commUsername").replaceWith("<p class='commUsername'>" + commUsername + "</p>");
+  $(".commTag").replaceWith("<p class='commTag'>" + commTag + "</p>");
+  $(".commTitle").replaceWith("<h4 class='commTitle'>" + commTitle + "</h4>");
+  $(".commImage").replaceWith("<img class='commImage' src='" + commImage + "'>");
+  $(".commCaption").replaceWith("<p class='commCaption'>" + commCaption + "</p>");
+});*/
+/*async function postImageAndCaption(image, caption) {
   const postData = {
     image: image,
     caption: caption
@@ -304,7 +322,7 @@ async function postImageAndCaption(image, caption) {
   postContainer.appendChild(postCaption);
 
   document.body.appendChild(postContainer);
-}
+}*/
 
 
 
