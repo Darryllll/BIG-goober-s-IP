@@ -590,7 +590,7 @@
     position: absolute;
     bottom: 25%;
     height: 50%;
-    width: 40%;
+    width: 34%;
     margin-left: 5%;
     background-color: black;
     opacity: .7;
@@ -609,16 +609,28 @@
     font-size: 20px;
     font-weight: 450;
 }
-#LobbyInven1{
-    margin-left: 8%;
+#LobbyInven-1{
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-left: 7%;
+}
+#LobbyInven0{
     margin-bottom: 5%;
+    margin-left: 9%;
+}
+#LobbyInven1{
+    margin-left: 7%;
+    margin-bottom: 3%;
+    font-size: 28px;
 }
 #LobbyInven2{
+    
     margin-bottom: 0%;
     font-size: 14px;
     font-weight: 300;
 }
 #LobbyInven3{
+    
     font-weight: 390;
     margin-left: 8%;
 }
@@ -680,7 +692,7 @@
     .lobbyBGBot{
         position: fixed;
         width: 100%;
-        bottom: -10%;
+        bottom: -6%;
         margin-left: 0;
         opacity: 1;
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -774,7 +786,7 @@
     }
     .LobbyInven{
         position: absolute;
-        bottom: 59%;
+        bottom: 55%;
         height: 30%;
         width: 80%;
         margin-left: 10%;
@@ -786,6 +798,7 @@
     }
     .LobbyInven div{
         margin-top: 8.5%;
+        
     }
     .LobbyInven div p{
         position: relative;
@@ -795,16 +808,29 @@
         font-size: 20px;
         font-weight: 450;
     }
+    #LobbyInven-1{
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-left: 7%;
+    }
+    #LobbyInven0{
+        margin-bottom: 10%;
+        margin-left: 9%;
+        font-size: 15px;
+    }
     #LobbyInven1{
-        margin-left: 10%;
+        margin-left: 7%;
         margin-bottom: 5%;
+        font-size: 13px;
     }
     #LobbyInven2{
+        
         margin-bottom: 0%;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 300;
     }
     #LobbyInven3{
+        
         font-weight: 390;
         margin-left: 8%;
     }
