@@ -480,6 +480,11 @@
     margin-left: 10%;
     border-radius: 10px;
 }
+.lobbyBGBot{
+    position: fixed;
+    width: 100%;
+    bottom: -10%;
+}
 .LobbyButtonsBG{
     position: absolute;
     bottom: 1.8%;
@@ -540,6 +545,13 @@
 #LobbyButton4{
     width: 60%;
 }
+.LobbyRoom{
+    position: fixed;
+    width: 130%;
+    z-index: -10000;
+    top: 5%;
+    margin-left: -12.5%;
+}
 .LobbySeason{
     position: absolute;
     bottom: 43%;
@@ -566,8 +578,7 @@
     width: 80%;
     margin-left: 10%;
     background-color: black;
-    opacity: .4;
-    mix-blend-mode: multiply;
+    opacity: .7;
     border: none;
     border-radius: 10px;
     color: #FFFFFF;
@@ -631,6 +642,180 @@
     filter: brightness(115%);
     border-radius: 7px;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+}
+@media only screen and (max-width: 600px) {
+    .LobbyButtons{
+        position: absolute;
+        bottom: 4.5%;
+        width: 80%;
+        background: none;
+        height: 36%;
+        margin-left: 10%;
+        border-radius: 10px;
+    }
+    .lobbyBGBot{
+        position: fixed;
+        width: 100%;
+        bottom: -10%;
+    }
+    .LobbyButtonsBG{
+        position: absolute;
+        bottom: 1.8%;
+        width: 82%;
+        background-color: #F7C68B;
+        height: 39%;
+        margin-left: 9%;
+        border-radius: 10px;
+        opacity: .4;
+        mix-blend-mode: multiply;
+    }
+    .lobbyCol{
+        display: flex;
+        position: relative;
+        height: 50%;
+    }
+    .lobbyPart{
+        position: relative;
+        height: 100%;
+        width: 50%;
+    }
+    .LobbyButtons button{
+        position: relative;
+        width: 90%;
+        height: 80%;
+        margin-left: 10%;
+        margin-top: 10%;
+        background:none;
+        border: none;
+        cursor: pointer;
+        z-index: 90;
+        opacity: 1;
+        mix-blend-mode: normal;
+    }
+    .LobbyButtons button img{
+        position: relative;
+        width: 100%;
+        z-index: 100;
+        mix-blend-mode: normal;
+    }
+    .LobbyButtons button p{
+        font-weight: 450;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+    }
+    #LobbyButton3{
+        margin-top: 1%;
+        width: 75%;
+    }
+    #LobbyButton1{
+        margin-top: 2%;
+        width: 90%;
+    }
+    #LobbyButton2{
+        margin-top: 2%;
+        width: 70%;
+    }
+    #LobbyButton4{
+        width: 60%;
+    }
+    .LobbyRoom{
+        position: fixed;
+        width: 130%;
+        z-index: -10000;
+        top: 5%;
+        margin-left: -12.5%;
+    }
+    .LobbySeason{
+        position: absolute;
+        bottom: 43%;
+        width: 40%;
+        margin-left: 30%;
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+        border-radius: 50px;
+        border: none;
+        background-color: #D69541;
+        font-weight: 450;
+        font-size: 16px;
+        color: white;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    }
+    .LobbySeason ::shadow{
+        mix-blend-mode: multiply;
+    }
+    .LobbyInven{
+        position: absolute;
+        bottom: 59%;
+        height: 30%;
+        width: 80%;
+        margin-left: 10%;
+        background-color: black;
+        opacity: .7;
+        border: none;
+        border-radius: 10px;
+        color: #FFFFFF;
+    }
+    .LobbyInven div{
+        margin-top: 8.5%;
+    }
+    .LobbyInven div p{
+        position: relative;
+        display: flex;
+        margin-bottom: 10%;
+        margin-left: 7%;
+        font-size: 20px;
+        font-weight: 450;
+    }
+    #LobbyInven1{
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
+    #LobbyInven2{
+        margin-bottom: 0%;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    #LobbyInven3{
+        font-weight: 390;
+        margin-left: 8%;
+    }
+    .LobbyMoney{
+        display: flex;
+        position: absolute;
+        background:none;
+        bottom: 93.2%;
+        width: 30%;
+        height: 5%;
+        margin-left: 80%;
+        align-items: center;
+        text-align: right;
+    }
+    #LobbyMoneyNum{
+        position: relative;
+        font-weight: 450;
+        mix-blend-mode: multiply;
+        text-align: right;
+        margin-left: -19%;
+        mix-blend-mode: multiply;
+        opacity: .7;
+    }
+    #LobbyCoin{
+        position: absolute;
+        width: 23%;
+        margin-left: -45%;
+        background: none;
+    }
+    #LobbyMoneyBG{
+        position: absolute;
+        bottom: 93.5%;
+        width: 30%;
+        height: 4.5%;
+        margin-left: 65%;
+        filter: brightness(115%);
+        border-radius: 7px;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    }
 }
 /* ! ! ! Community Page ! ! ! */
 #CommBGTop{
