@@ -1168,7 +1168,7 @@ div.fixed {
 .shopMoneyDiv{
     position: absolute;
     display: flex;
-    margin-left: -10%;
+    margin-left: 2%;
     width: 100%;
 }
 #shopMoneyNum{
@@ -1182,7 +1182,8 @@ div.fixed {
 }
 #shopCoin{
     position: relative;
-    width: 30%;
+    width: 20%;
+    height: 100%;
     background: none;
 }
 #shopMoneyBG{
@@ -1303,6 +1304,7 @@ div.fixed {
     }
     .shopMoneyDiv{
         display: flex;
+        margin-left: 40%;
     }
     #shopMoneyNum{
         position: relative;
