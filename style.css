@@ -1228,3 +1228,168 @@ div.fixed {
     top: 2px;    
     left: 15%;
 }
+/* ! ! Support Page ! ! */
+}
+#supportPage h2{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25%;
+}
+#supportPage h6{
+    position: absolute;
+    text-align: center;
+    font-weight: 420;
+    margin-top: 56%;
+    width: 80%;
+    margin-left: 10%;
+}
+#supportPage section{
+    position: absolute;
+    margin-top: 65%;
+    margin-left: 8%;
+    font-size: 13px;
+    font-weight: 400;
+    width: 90%;
+    height: 60%;
+}
+.SupportEmail{
+    position: relative;
+    background-color: #F9F4E8;
+    border: solid;
+    border-width: 2px;
+    border-color: #E8AC6B;
+    border-radius: 8px;
+    width: 87%;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    padding: 2%;
+    height: 4%;
+}
+.SupportEmail ::shadow{
+    mix-blend-mode: multiply;
+}
+.SupportIssue{
+    position: relative;
+    background-color: #F9F4E8;
+    border: solid;
+    border-width: 2px;
+    border-color: #E8AC6B;
+    border-radius: 8px;
+    width: 87%;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    padding: 2%;
+    height: 25%;
+    resize: none;
+}
+.SupportIssue ::shadow{
+    mix-blend-mode: multiply;
+}
+.supportButtons{
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    height: 10%;
+    border: none;
+    margin-left: -2%;
+    margin-right: -2%;
+
+}
+.supportButton1{
+    position: relative;
+    width: 30%;
+    height: 70%;
+    font-size: 9.5px;
+    font-weight: 500;
+    margin-right: 2%;
+    border: none;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    border-radius: 7px;
+    background-color: #D69541;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.supportButton2{
+    position: relative;
+    width: 30%;
+    height: 70%;
+    font-size: 9.5px;
+    font-weight: 500;
+    margin-right: 2%;
+    border: none;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    border-radius: 7px;
+    background-color: #DD9145;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.supportButton3{
+    position: relative;
+    width: 30%;
+    height: 70%;
+    font-size: 9.5px;
+    font-weight: 500;
+    margin-right: 2%;
+    border: none;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    border-radius: 7px;
+    background-color: #CE8536;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.supportOthers{
+    width: 93%;
+    height: 20%;
+    margin-left: -2%;
+    border-radius: 7px;
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-size: 9.5px;
+    resize: none;
+    border: none;
+    background-color: #C1782F;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    color: white;
+}
+.supportOthers p{
+    display: inline;
+    font-size: 9px;
+    margin-left: 2%;
+    opacity: 80%;
+    font-weight: 200;
+}
+.supportOthers textarea{
+    position: relative;
+    width: 96%;
+    font-size: 9.5px;
+    resize: none;
+    height: 60%;
+    border-radius: 7px;
+    margin-left: -2%;
+    opacity: 70%;
+    border: #5E4227;
+    background-color: EDCEA9;
+}
+.supportSubmit{
+    position: absolute;
+    width: 28%;
+    bottom: 5%;
+    margin-left: 36%;
+    background-color: #D69541;
+    border: none;
+    border-radius: 10000px;
+    height: 5%;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    box-shadow: -2px 2px 0 rgba(0,0,0,.2);
+    text-shadow: -2px 2px 0 rgba(0,0,0,.2);
+}
+.supportSubmit ::shadow{
+    mix-blend-mode: multiply;
+}
