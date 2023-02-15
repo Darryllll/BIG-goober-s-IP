@@ -1,5 +1,4 @@
 
-
 /*function LoginPage_Login() {
   $(document).ready(function () {
     const APIKEY = "63de48653bc6b255ed0c464c";
@@ -161,24 +160,28 @@ function LoginPage_Login() {
     $.ajax(settings).done(function (response) {
       let emailWrong = true;
       let passWrong = true;
-  
+    
       for (let i = 0; i < response.length; i++) {
         if (response[i].email === userName) {
           emailWrong = false;
+    
+          // Extract the username from the response
+          let username = response[i].username;
+    
+          // Store the username in the session storage
+          sessionStorage.setItem("username", username);
+    
+          // Redirect to the lobby page
+          window.location.href = "Lobby.html";
         }
-  
+    
         if (response[i].password === userPass) {
           passWrong = false;
         }
       }
-      
-      if (!emailWrong && !passWrong) {
-        window.location.href = "Lobby.html";
-      } else {
-        let errorMessage = "Error: ";
-        if (emailWrong || passWrong) {
-          errorMessage += "Data is incorrect";
-        }
+    
+      if (emailWrong || passWrong) {
+        let errorMessage = "Error: Data is incorrect";
         $("#errorModal .modal-body").html(errorMessage);
         $("#errorModal").modal("show");
       }
@@ -271,8 +274,194 @@ function submitButton() {
     });
   });
 };
-/* for community page*/
-const imagepost = document.querySelector("imagepost");
+/* for lobby page*/
+$(document).ready(function() {
+  const APIKEY = "63de48653bc6b255ed0c464c";
+  let userEmail = sessionStorage.getItem("userEmail");
+
+  if (!userEmail) {
+    window.location.href = "Login.html";
+    return;
+  }
+
+  let settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://ipproject-81b0.restdb.io/rest/login",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache",
+    },
+  };
+
+  $.ajax(settings).done(function(response) {
+    let user;
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].email === userEmail) {
+        user = response[i];
+        break;
+      }
+    }
+    if (!user) {
+      window.location.href = "Login.html";
+      return;
+    }
+    let username = user.name;
+
+    // Replace the welcome message with the username
+    $("#LobbyInven0").html(username);
+  });
+});
+
+/* for posting page*/
+function postSubmit() {
+  const APIKEY = "63de48653bc6b255ed0c464c";
+  let caption = $("#caption").val();
+  let title = $("#title").val();
+
+  if (!caption || !title) {
+    alert("Please fill in both caption and title fields.");
+    return;
+  }
+
+  let jsondata = {
+    "caption": caption,
+    "title": title,
+  };
+
+  var captionsettings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://ipproject-81b0.restdb.io/rest/posts",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache"
+    },
+    "processData": false,
+    "data": JSON.stringify(jsondata)
+  };
+
+  $.ajax(captionsettings).done(function (response) {
+    if (response.hasOwnProperty("caption") && response.caption != null && 
+        response.hasOwnProperty("title") && response.title != null) {
+      alert("posted");
+    } else {
+      alert("error");
+    }
+  }).fail(function() {
+    alert("error");
+  });
+
+  var apikey = "63de48653bc6b255ed0c464c";
+  $.ajaxPrefilter(function(options) {
+    if (!options.beforeSend) {
+      options.beforeSend = function(xhr) {
+        xhr.setRequestHeader('x-apikey', apikey);
+      };
+    }
+  });
+
+  var formData = new FormData();
+  var files = $('#file1')[0].files;
+  // Loop through each of the selected files.
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+    var name = files[0].name;
+    // Add the file to the request.
+    formData.append('myfile', file, file.name);
+  }
+
+  $.ajax({
+    "data": formData,
+    "url": "https://ipproject-81b0.restdb.io/rest/image",
+    "method": "POST",
+    "contentType": false,
+    "processdata": false,
+  }).done(function(response) {
+    console.log("upload success");
+    console.log(response);
+  });
+}
+
+
+
+function fart() {
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes();
+  var dateTime = date+' '+time;
+  
+  console.log(dateTime)
+}
+
+  /*var apikey = "63de48653bc6b255ed0c464c";
+  $.ajaxPrefilter(function(options) {
+    if (!options.beforeSend) {
+      options.beforeSend = function(xhr) {
+        xhr.setRequestHeader('x-apikey', apikey);
+      };
+    }
+  });
+
+  var formData = new FormData();
+  var files = $('#file1')[0].files;
+  // Loop through each of the selected files.
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+    var name = files[0].name;
+    // Add the file to the request.
+    formData.append('myfile', file, file.name);
+  }
+
+  $.ajax({
+    "data": formData,
+    "url": "https://ipproject-81b0.restdb.io/rest/image",
+    "method": "POST",
+    "contentType": false,
+    "processdata": false,
+  }).done(function(response) {
+    console.log("upload success");
+    console.log(response);
+  });
+}*/
+
+
+/*function ff() {
+  var apikey = "63de48653bc6b255ed0c464c";
+  $.ajaxPrefilter(function( options ) {
+	  if ( !options.beforeSend) {
+		  options.beforeSend = function (xhr) { 
+			  xhr.setRequestHeader('x-apikey', apikey);
+  var formData = new FormData();
+  var files = $('#file1')[0].files; 
+        // Loop through each of the selected files.
+    for (var i = 0; i < files.length; i++) {
+         var file = files[i];
+         var name = files[0].name;
+          // Add the file to the request.
+        formData.append('myfile', file, file.name);
+    $.ajax({
+        "data": formData,
+        "url": "https://ipproject-81b0.restdb.io/rest/posts",
+        "method": "POST",
+        "contentType": false,
+    }).done(function (response) {
+      console.log("upload success");
+      console.log(response);
+    });
+        }
+		}
+	}
+});
+}*/
+
+
+
+
 /*var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://ipproject-81b0.restdb.io/rest/login", true);
 xhr.setRequestHeader("x-apikey", "<api-key>");
