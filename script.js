@@ -279,11 +279,6 @@ $(document).ready(function() {
   const APIKEY = "63de48653bc6b255ed0c464c";
   let userEmail = sessionStorage.getItem("userEmail");
 
-  if (!userEmail) {
-    window.location.href = "Login.html";
-    return;
-  }
-
   let settings = {
     "async": true,
     "crossDomain": true,
@@ -304,17 +299,11 @@ $(document).ready(function() {
         break;
       }
     }
-    if (!user) {
-      window.location.href = "Login.html";
-      return;
-    }
-    let username = user.name;
-
-    // Replace the welcome message with the username
-    $("#LobbyInven0").html(username);
   });
 });
-
+var username = sessionStorage.getItem("username");
+var cusername = document.querySelector("#LobbyInven0")
+cusername.innerHTML = cusername.innerHTML.replace("username",username)
 /* for posting page*/
 function postSubmit() {
   const APIKEY = "63de48653bc6b255ed0c464c";
