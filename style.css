@@ -20,6 +20,7 @@
     cursor: pointer;
     z-index: 15;
     position: fixed;
+    top: 1%;
 }
 .back img{
     width: 100%;
@@ -1426,10 +1427,10 @@ div.fixed {
     position: relative;
     background-color: #F9F4E8;
     border: solid;
-    border-width: 2px;
-    border-color: #E8AC6B;
+    border-width: 4px;
+    border-color: #d59149;
     border-radius: 8px;
-    width: 45%;
+    width: 40%;
     box-shadow: -2px 2px 0 rgba(0,0,0,.2);
     padding: 1%;
     height: 2%;
@@ -1444,10 +1445,10 @@ div.fixed {
     position: relative;
     background-color: #F9F4E8;
     border: solid;
-    border-width: 2px;
-    border-color: #E8AC6B;
+    border-width: 5px;
+    border-color: #d59149;
     border-radius: 10px;
-    width: 45%;
+    width: 40%;
     box-shadow: -2px 2px 0 rgba(0,0,0,.2);
     padding: 1%;
     height: 12%;
@@ -1553,7 +1554,7 @@ div.fixed {
     position: absolute;
     width: 10%;
     bottom: 2%;
-    margin-left: 26%;
+    margin-left: 23%;
     background-color: #D69541;
     border: none;
     border-radius: 10000px;
@@ -1738,5 +1739,63 @@ div.fixed {
     }
     .supportSubmit ::shadow{
         mix-blend-mode: multiply;
+    }
+}
+/* ! ! Maintenance ! ! */
+#maintPage p{
+    position: absolute;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    top: 15%;
+    margin-left: 12%;
+}
+.maintImg{
+    position: fixed;
+    z-index: 100;
+    width: 20%;
+    margin-left: 16.5%;
+    top: 32%;
+}
+#maintPage a{
+    position: absolute;
+    top: 24%;
+    width: 70%;
+    margin-left: 22%;
+    color: #6B3824;
+    font-size: 18px;
+}
+#maintBack{
+    width: 4%;
+    top: 2%;
+}
+@media only screen and (max-width: 600px) {
+    #maintPage p{
+        position: absolute;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+        top: 15%;
+        top: 15%;
+        margin-left: 0%;
+    }
+    .maintImg{
+        position: fixed;
+        z-index: 100;
+        width: 60%;
+        margin-left: 20%;
+        top: 28%;
+    }
+    #maintPage a{
+        position: absolute;
+        top: 74%;
+        width: 70%;
+        margin-left: 27%;
+        color: #6B3824;
+        font-size: 18px;
+    }
+    #maintBack{
+        width: 10%;
+        top: 1%;
     }
 }
