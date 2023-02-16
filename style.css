@@ -913,12 +913,14 @@
 /* ! ! ! Community Page ! ! ! */
 #CommBGTop{
     position: fixed;
-    height: 12%;
+    height: 15%;
     width: 100%;
     z-index: 10;
     left: 0;
     right: 0;
     top: 0;
+    mix-blend-mode: multiply;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .2);
 }
 #CommBGBottom{
     position: fixed;
@@ -926,19 +928,20 @@
     bottom: 0;
     width: 100%;
     z-index: 10;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .2);
 }
-
 .CommsAdd{
     position: fixed;
     z-index: 15;
-    width: 15%;
+    width: 4%;
     bottom: .9%;
     height: 5.5%;
     border: none;
-    margin-left: 42.5%;
+    margin-left: 48%;
     background-color: #F4BD6C;
     border-radius: 15%;
-    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    box-shadow: -2px 2px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
 .CommsAdd img{
     position: relative;
@@ -948,9 +951,9 @@
     height: 90%;
 }
 .commBigSpace{
-    height: 00%;
+    height: 2%;
     width: 100%;
-    margin-top: 30%;
+    margin-top: 4%;
     background-color: #73AD21;
 }
 .commContent{
@@ -959,24 +962,45 @@
     font-size: 12.7px;
     padding-left: 3%;
     background: none;
-    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
     margin-top: 2%;
     background:none;
     z-index: -1000;
     padding-bottom: 1%;
 }
-.commUsername{
-    font-size: 11px;
-    font-weight: 450;
-    margin-left: 2%;
+#cusername{
+    padding-top: 4%;
+    padding-bottom: .8%;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: .4%;
     position: relative;
     width: 100%;
+    opacity: .7;
 }
-
+#tag{
+    display: inline;
+    background-color: #f8b864;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: .2%;
+    padding-bottom: .2%;
+    font-weight: 500;
+    color: white;
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 100px;
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+}
 .commCaption{
     position: relative;
     width: 100%;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 1%;
+}
+#caption{
+    font-size: 14px;
+    padding-bottom: 1%;
 }
 .triangle-up {
     position: relative;
@@ -986,7 +1010,7 @@
 	border-right: 5px solid transparent;
 	border-bottom: 10px solid #555;
 }
-.triangle-upSelect {
+.triangleup-upSelect {
     position: relative;
 	width: 0;
 	height: 0;
@@ -1001,19 +1025,141 @@
     margin: 20px 0;
   }
   
-  .postImage {
+.postImage {
     width: 300px;
     height: 300px;
-  }
+}
   
-  .postCaption {
+.postCaption {
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
-  }
+}
+@media only screen and (max-width: 600px) {
+    #CommBGTop{
+        position: fixed;
+        height: 12%;
+        width: 100%;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    #CommBGBottom{
+        position: fixed;
+        height: 7%;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .CommsAdd{
+        position: fixed;
+        z-index: 15;
+        width: 15%;
+        bottom: .9%;
+        height: 5.5%;
+        border: none;
+        margin-left: 42.5%;
+        background-color: #F4BD6C;
+        border-radius: 15%;
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, .2);
+    }
+    .CommsAdd img{
+        position: relative;
+        background: none;
+        width: 65%;
+        margin-top: 5%;
+        height: 90%;
+    }
+    .commBigSpace{
+        height: 00%;
+        width: 100%;
+        margin-top: 30%;
+        background-color: #73AD21;
+    }
+    .commContent{
+        top: 0%;
+        width: 100%;
+        font-size: 12.7px;
+        padding-left: 3%;
+        background: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+        margin-top: 2%;
+        background:none;
+        z-index: -1000;
+        padding-bottom: 1%;
+    }
+    #cusername{
+        padding-top: 3%;
+        padding-bottom: 2%;
+        font-size: 12px;
+        font-weight: 500;
+        margin-left: 1%;
+        position: relative;
+        width: 100%;
+        opacity: .7;
+    }
+    #tag{
+        display: inline;
+        background-color: #f8b864;
+        padding-left: 3%;
+        padding-right: 3%;
+        font-weight: 500;
+        color: white;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        border-radius: 100px;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    }
+    .commCaption{
+        position: relative;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+        padding-top: 0;
+    }
+    #caption{
+        font-size: 10px;
+        padding-bottom: 1%;
+    }
+    .triangle-up {
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 10px solid #555;
+        margin-bottom: 2%;
+    }
+    .triangleup-upSelect {
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 10px solid #EAB065;
+    }
+    .post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+      }
+      
+    .postImage {
+        width: 300px;
+        height: 300px;
+    }
+      
+    .postCaption {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
 
-
-/**/
+/* ! ! post page ! ! */
 div.fixed {
     position: fixed;
     bottom: 0px;
@@ -1023,8 +1169,8 @@ div.fixed {
 }
 #postPage section{
     position: absolute;
-    width: 90%;
-    margin-top: 20%;
+    width: 70%;
+    margin-top: 10%;
     margin-left: 5%;
     height: 80%;
 }
@@ -1042,40 +1188,26 @@ div.fixed {
     font-weight: 450;
     font-size: 15px;
 }
-.postImg{
-    position: absolute;
-    margin: 0px;
-    height: 8.6%;
-    margin-top: 7%;
-    width: 20%;
-    background-image: url(images/postAdd.png);
-    background-size: 100%;
-    margin-right: none;
-    
-}
-.postImg :hover{
-    box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-}
-.postImg::-webkit-file-upload-button {
-    visibility: hidden;
-  }
-  .postCapt{
+.postCapt{
     padding-left: 2%;
-    margin-top: 7%;
+    margin-top: 2%;
     position: relative;
-    margin-left: 27%;
-    width: 72.374%;
+    margin-left: 0%;
+    width: 100%;
     height: 30%;
     box-sizing: border-box;
     resize: none;
     opacity: 70%;
-  }
-  .postSubmit{
+}
+#caption{
+    font-size: 12px;
+}
+.postSubmit{
     position: absolute;
-    bottom: 40%;
-    width: 30%;
-    height: 5%;
-    font-size: 17px;
+    bottom: 10%;
+    width: 20%;
+    height: 7%;
+    font-size: 27px;
     font-weight: 500;
     margin-right: 20%;
     border-radius: 100px;
@@ -1085,22 +1217,32 @@ div.fixed {
     color: white;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-    margin-left: 35%;
+    margin-left: 28%;
+    cursor: pointer;
 }
 .postTag{
     display: flex;
-    margin-top: 4%;
+    margin-top: 2%;
     box-sizing: border-box;
     border: 2.5px solid #EAB065;
     border-radius: 100px;
     font-size: 12px;
     background-color: white;
+    text-shadow: none;
     background-position: 10px 10px; 
-    padding: 0px 0px 0px 2%;
-    width: 24.5%;
+    padding: 0px 0px 2px 2%;
+    width: 7.7%;
     transition: 0.4s ease-in-out;
 }
-.postTag[type=text]:focus {
+#tag{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-shadow: none;
+}
+.postTag ::placeholder{
+    color: black;
+}
+#tag[type=text]:focus {
     width: 80%;
     background-color: #E8AC6B;
     color: white;
@@ -1109,22 +1251,129 @@ div.fixed {
   }
 .postX{
     position: absolute;
-    width: 10%;
-    height: 5%;
-    padding: 2%;
+    width: 3%;
+    height: 6.2%;
+    padding: .5%;
     background: none;
     border: none;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 3%;
     border-radius: 500px;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
-
+    cursor: pointer;
 }
 .postX img{
     position: relative;
     width: 100%;
 }
-
+@media only screen and (max-width: 600px) {
+    div.fixed {
+        position: fixed;
+        bottom: 0px;
+        right: 0;
+        width: 300px;
+        border: 3px solid #73AD21;
+    }
+    #postPage section{
+        position: absolute;
+        width: 90%;
+        margin-top: 20%;
+        margin-left: 5%;
+        height: 80%;
+    }
+    .postTitle[type=text]{
+        width: 100%;
+        height: 7%;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid rgb(122, 122, 122);
+        font-size: 16px;
+        font-weight: 450;
+        padding-left: 2%;
+    }
+    .postTitle ::placeholder{
+        font-weight: 450;
+        font-size: 15px;
+    }
+    .postCapt{
+        padding-left: 2%;
+        margin-top: 7%;
+        position: relative;
+        margin-left: 0%;
+        width: 100%;
+        height: 30%;
+        box-sizing: border-box;
+        resize: none;
+        opacity: 70%;
+    }
+    #caption{
+        font-size: 12px;
+    }
+    .postSubmit{
+        position: absolute;
+        bottom: 40%;
+        width: 30%;
+        height: 5%;
+        font-size: 17px;
+        font-weight: 500;
+        margin-right: 20%;
+        border-radius: 100px;
+        border: none;
+        background-color: #D69541;
+        background-size: cover;
+        color: white;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+        margin-left: 35%;
+    }
+    .postTag{
+        display: flex;
+        margin-top: 4%;
+        box-sizing: border-box;
+        border: 2.5px solid #EAB065;
+        border-radius: 100px;
+        font-size: 12px;
+        background-color: white;
+        text-shadow: none;
+        background-position: 10px 10px; 
+        padding: 0px 0px 2px 2%;
+        width: 24.5%;
+        transition: 0.4s ease-in-out;
+    }
+    #tag{
+        background-color: rgb(255, 255, 255);
+        color: black;
+        text-shadow: none;
+    }
+    .postTag ::placeholder{
+        color: black;
+    }
+    #tag[type=text]:focus {
+        width: 80%;
+        background-color: #E8AC6B;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    .postX{
+        position: absolute;
+        width: 10%;
+        height: 5%;
+        padding: 2%;
+        background: none;
+        border: none;
+        margin-top: 5%;
+        margin-left: 3%;
+        border-radius: 500px;
+        box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    
+    }
+    .postX img{
+        position: relative;
+        width: 100%;
+    }
+    
+}
 /* ! ! Shop Page ! ! */
 .shopBG{
     position: fixed;
