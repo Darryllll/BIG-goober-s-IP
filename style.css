@@ -607,6 +607,7 @@
     color: white;
     box-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
     text-shadow: -2px 2px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
 .LobbySeason ::shadow{
     mix-blend-mode: multiply;
