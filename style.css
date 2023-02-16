@@ -971,11 +971,6 @@
     position: relative;
     width: 100%;
 }
-.commTag{
-    font-size: 10px;
-    position: relative;
-    width: 100%;
-}
 
 .commCaption{
     position: relative;
@@ -1016,14 +1011,7 @@
     margin-top: 10px;
   }
 
-  #imagepost{
-    width:500px;
-    height:230px;
-    border:1px solid black;
-    background-position: center;
-    background-size: cover;
-  }
-  
+
 /**/
 div.fixed {
     position: fixed;

@@ -278,7 +278,6 @@ function submitButton() {
 $(document).ready(function() {
   const APIKEY = "63de48653bc6b255ed0c464c";
   let userEmail = sessionStorage.getItem("userEmail");
-
   let settings = {
     "async": true,
     "crossDomain": true,
@@ -290,7 +289,7 @@ $(document).ready(function() {
       "cache-control": "no-cache",
     },
   };
-
+  
   $.ajax(settings).done(function(response) {
     let user;
     for (let i = 0; i < response.length; i++) {
@@ -300,15 +299,22 @@ $(document).ready(function() {
       }
     }
   });
+  var username = sessionStorage.getItem("username");
+  var lobbyUsername = document.querySelector("#LobbyInven0")
+  if (username.length > 0) {
+  lobbyUsername.innerHTML = lobbyUsername.innerHTML.replace("username", username);
+}
 });
-var username = sessionStorage.getItem("username");
-var cusername = document.querySelector("#LobbyInven0")
-cusername.innerHTML = cusername.innerHTML.replace("username",username)
+
+
+
+
 /* for posting page*/
 function postSubmit() {
   const APIKEY = "63de48653bc6b255ed0c464c";
   let caption = $("#caption").val();
   let title = $("#title").val();
+  let tag = $("#tag").val();
 
   if (!caption || !title) {
     alert("Please fill in both caption and title fields.");
@@ -318,6 +324,7 @@ function postSubmit() {
   let jsondata = {
     "caption": caption,
     "title": title,
+    "tag": tag,
   };
 
   var captionsettings = {
@@ -335,45 +342,151 @@ function postSubmit() {
   };
 
   $.ajax(captionsettings).done(function (response) {
+    console.log(response);
+    $("#postSubmit").prop("disabled", false);
     if (response.hasOwnProperty("caption") && response.caption != null && 
         response.hasOwnProperty("title") && response.title != null) {
-      alert("posted");
+      // Store caption, title, and tag values in session storage
+      sessionStorage.setItem("caption", caption);
+      sessionStorage.setItem("title", title);
+      sessionStorage.setItem("tag", tag);
+      
+      // Redirect to community page
+      window.location.href = "Community.html";
     } else {
       alert("error");
     }
   }).fail(function() {
     alert("error");
   });
-
-  var apikey = "63de48653bc6b255ed0c464c";
-  $.ajaxPrefilter(function(options) {
-    if (!options.beforeSend) {
-      options.beforeSend = function(xhr) {
-        xhr.setRequestHeader('x-apikey', apikey);
-      };
+}
+$(document).ready(function() {
+  const APIKEY = "63de48653bc6b255ed0c464c";
+  let cusername = sessionStorage.getItem("username");
+  let caption = sessionStorage.getItem("caption");
+  let title = sessionStorage.getItem("title");
+  let tag = sessionStorage.getItem("tag");
+  let settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://ipproject-81b0.restdb.io/rest/posts",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache",
+    },
+  };
+  $.ajax(settings).done(function(response) {
+    console.log("response: ", response);
+    let user, cap, tit, tg;
+    for (let i = 0; i < response.length; i++) {
+      console.log("response[i].username: ", response[i].username);
+      if (response[i].username === cusername) {
+        user = response[i];
+        break;
+      }
+    }
+    console.log("user: ", user);
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].caption === caption) {
+        cap = response[i];
+        break;
+      }
+    }
+    console.log("cap: ", cap);
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].title === title) {
+        tit = response[i];
+        break;
+      }
+    }
+    console.log("tit: ", tit);
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].tag === tag) {
+        tg = response[i];
+        break;
+      }
     }
   });
-
-  var formData = new FormData();
-  var files = $('#file1')[0].files;
-  // Loop through each of the selected files.
-  for (var i = 0; i < files.length; i++) {
-    var file = files[i];
-    var name = files[0].name;
-    // Add the file to the request.
-    formData.append('myfile', file, file.name);
+  var commUsername = document.querySelector("#cusername");
+  if (cusername.length>0) {
+    commUsername.innerHTML = commUsername.innerHTML.replace("username",cusername)
   }
 
-  $.ajax({
-    "data": formData,
-    "url": "https://ipproject-81b0.restdb.io/rest/image",
-    "method": "POST",
-    "contentType": false,
-    "processdata": false,
-  }).done(function(response) {
-    console.log("upload success");
-    console.log(response);
+  var commTag = document.querySelector("#tag");
+  commTag.innerHTML = tag;
+
+  var commTitle = document.querySelector("#title");
+  commTitle.innerHTML = title;
+
+  var commCaption = document.querySelector("#caption");
+  commCaption.innerHTML = caption;
+})
+var username = sessionStorage.getItem("username");
+var lobbyUsername = document.querySelector("#LobbyInven0")
+if (username.length > 0) {
+  lobbyUsername.innerHTML = lobbyUsername.innerHTML.replace("username", username);
+}
+
+
+
+
+/*$(document).ready(function() {
+  const APIKEY = "63de48653bc6b255ed0c464c";
+  let cusername = sessionStorage.getItem("username");
+  let caption = sessionStorage.getItem("caption");
+  let title = sessionStorage.getItem("title");
+  let tag = sessionStorage.getItem("tag");
+  let settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://ipproject-81b0.restdb.io/rest/posts",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache",
+    },
+  };
+  $.ajax(settings).done(function(response) {
+    let user;
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].username === cusername) {
+        user = response[i];
+        break;
+      }
+    }
+    let caption;
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].caption === caption) {
+        caption = response[i];
+        break;
+      }
+    }
+    let title;
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].title === title) {
+        title = response[i];
+        break;
+      }
+    }
+    let tag;
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].tag === tag) {
+        tag = response[i];
+        break;
+      }
+    }
   });
+})
+var caption = sessionStorage.getItem("caption");
+var ccaption = document.querySelector("#caption")
+for (let i = 0; i < caption.length; i++) {
+  if(sessionStorage.getItem("caption")== null){
+    ccaption.innerHTML = ccaption.innerHTML.replace("caption",caption);
+    break;
+  }
 }
 
 
