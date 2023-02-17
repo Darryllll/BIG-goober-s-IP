@@ -127,7 +127,7 @@
 
 function LoginPage_Login() {
   $(document).ready(function () {
-    const APIKEY = "63ef3c6e478852088da683ab";
+    const APIKEY = "63db64973bc6b255ed0c456e";
 
     let userName = $("#login-email").val();
     let userPass = $("#login-password").val();
@@ -146,7 +146,7 @@ function LoginPage_Login() {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-f3a0.restdb.io/rest/login",
+      "url": "https://tutorial-9477.restdb.io/rest/login",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -195,7 +195,7 @@ function LoginPage_Login() {
 //for the sign up page
 function submitButton() {
   $(document).ready(function () {
-    const APIKEY = "63ef3c6e478852088da683ab";
+    const APIKEY = "63db64973bc6b255ed0c456e";
     let userName = $("#signUp-Email").val();
     let userPass = $("#signUp-Password").val();
     let userUname = $("#signUp-Username").val();
@@ -209,7 +209,7 @@ function submitButton() {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-f3a0.restdb.io/rest/login ",
+      "url": "https://tutorial-9477.restdb.io/rest/login",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -252,7 +252,7 @@ function submitButton() {
       var postSettings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://ipproject-f3a0.restdb.io/rest/login ",
+        "url": "https://tutorial-9477.restdb.io/rest/login",
         "method": "POST",
         "headers": {
           "content-type": "application/json",
@@ -277,12 +277,12 @@ function submitButton() {
 };
 /* for lobby page*/
 $(document).ready(function() {
-  const APIKEY = "63ef3c6e478852088da683ab";
+  const APIKEY = "63db64973bc6b255ed0c456e";
   let userEmail = sessionStorage.getItem("userEmail");
   let settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://ipproject-f3a0.restdb.io/rest/login",
+    "url": "https://tutorial-9477.restdb.io/rest/login",
     "method": "GET",
     "headers": {
       "content-type": "application/json",
@@ -312,7 +312,7 @@ $(document).ready(function() {
 
 /* for posting page*/
 function postSubmit() {
-  const APIKEY = "63ef3c6e478852088da683ab";
+  const APIKEY = "63db64973bc6b255ed0c456e";
   let caption = $("#caption").val();
   let title = $("#title").val();
   let tag = $("#tag").val();
@@ -331,7 +331,7 @@ function postSubmit() {
   var captionsettings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://ipproject-f3a0.restdb.io/rest/posts",
+    "url": "https://tutorial-9477.restdb.io/rest/posts",
     "method": "POST",
     "headers": {
       "content-type": "application/json",
@@ -362,7 +362,7 @@ function postSubmit() {
   });
 }
 $(document).ready(function() {
-  const APIKEY = "63ef3c6e478852088da683ab";
+  const APIKEY = "63db64973bc6b255ed0c456e";
   let cusername = sessionStorage.getItem("username");
   let caption = sessionStorage.getItem("caption");
   let title = sessionStorage.getItem("title");
@@ -370,7 +370,7 @@ $(document).ready(function() {
   let settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://ipproject-f3a0.restdb.io/rest/posts",
+    "url": "https://tutorial-9477.restdb.io/rest/posts",
     "method": "GET",
     "headers": {
       "content-type": "application/json",
@@ -439,11 +439,11 @@ function upvote() {
     localStorage.setItem('upvoteCount', countButtonHomeClicks);
     countDisplay.innerText = ` ${countButtonHomeClicks}`;
 
-    const APIKEY = "63ef3c6e478852088da683ab";
+    const APIKEY = "63db64973bc6b255ed0c456e";
     let settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-f3a0.restdb.io/rest/posts" + postId,
+      "url": "https://tutorial-9477.restdb.io/rest/posts" + postId,
       "method": "PUT",
       "headers": {
         "content-type": "application/json",
@@ -848,6 +848,8 @@ window.onclick = function(event) {
     modal6.style.display = "none";
   }
 };
+
+
 
 // Repeat for the remaining modals and buttons
 

@@ -7,6 +7,8 @@
     <title>Motif Support</title>
     <link rel="icon" type="image/png" href="images/logo.png"/>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="custom.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
@@ -33,13 +35,48 @@
                 <textarea></textarea>
             </button>
         </section>
-        <button class="supportSubmit">submit</button>
+        <button class="supportSubmit" data-toggle="modal" data-target="#successModal">submit</button>
         <button onclick="parent.location='Lobby.html'">
             <img src="images/back.png" class="back">
         </button>
+        <div id="successModal" class="modal fade">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Success!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>Your submission was successful.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
         <footer>
-            <p>&copy; 2023 MyWebsite.com</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4>Contact Us</h4>
+                  <p>Email:S10243233@connect.np.edu.sg<br>Email:S10243206@connect.np.edu.sg</p>
+                </div>
+                <div class="col-md-6">
+                  <h4>About Us</h4>
+                  <p>This project is a study app which motivates and encourages students to study more by using the different functions offered in the app. With a variety of ways where students can approach others online with and also provide as well as get help with. This app is a great way for students to benefit not only themselves but others as well.,</p>
+                </div>
+              </div>
+            </div>
           </footer>
-          
+        <script src="script.js" defer></script>
+        <script src="/jquery-3.6.3.js"></script>
+        <script src="lottie.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     </body>
+
 </html>
