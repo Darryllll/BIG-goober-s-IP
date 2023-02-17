@@ -2078,16 +2078,15 @@ div.fixed {
     mix-blend-mode: multiply;
 }
 .sketchfab-embed-wrapper{
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    top: 18%;
     width: 100%;
     z-index: -120;
-    height: 20;
 }
 .sketchfab-embed-wrapper iframe{
     position: absolute;
     width: 100%;
-    height: 600px;
+    height: 500px;
     box-shadow: 0 0 5px rgba(0, 0, 0,.4);
     margin-top: -45px;
 }
