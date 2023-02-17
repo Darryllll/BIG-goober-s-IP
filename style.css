@@ -2145,6 +2145,7 @@ div.fixed {
     height: 100%; 
     overflow: auto; 
     margin:25%;
+    margin-top: 0%;
   }
   
   
