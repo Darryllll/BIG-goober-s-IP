@@ -430,7 +430,7 @@ function upvote() {
   let buttonHome = document.querySelector('.triangle-up');
   let countButtonHomeClicks = parseInt(localStorage.getItem('upvoteCount') || 0);
   let countDisplay = document.getElementById('num');
-  let cusername = sessionStorage.getItem("username");
+  let postId = sessionStorage.getItem("postId");
 
   countDisplay.innerText = ` ${countButtonHomeClicks}`;
 
@@ -443,24 +443,21 @@ function upvote() {
     let settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-f3a0.restdb.io/rest/posts",
-      "method": "POST",
+      "url": "https://ipproject-f3a0.restdb.io/rest/posts" + postId,
+      "method": "PUT",
       "headers": {
         "content-type": "application/json",
         "x-apikey": APIKEY,
         "cache-control": "no-cache",
       },
       "data": JSON.stringify({
-        "username": cusername,
-        "upvoteCount": countButtonHomeClicks
+        "upvotes": countButtonHomeClicks
       })
     };
 
     $.ajax(settings).done(function(response) {
       console.log(response);
     });
-
-    console.log(countButtonHomeClicks);
   });
 }
 
