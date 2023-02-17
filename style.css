@@ -2064,3 +2064,74 @@ div.fixed {
         top: 1%;
     }
 }
+/* ! ! Display Page ! !*/
+#displayPage .back{
+    width: 4%;
+}
+#displayPage{
+    background-color: rgb(241, 211, 171);
+}
+#displayPage .background{
+    position: fixed;
+    width: 100%;
+    height: 30%;
+    mix-blend-mode: multiply;
+}
+.sketchfab-embed-wrapper{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    z-index: -120;
+    height: 20;
+}
+.sketchfab-embed-wrapper iframe{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    box-shadow: 0 0 5px rgba(0, 0, 0,.4);
+    margin-top: -45px;
+}
+.backgroundBot{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 40%;
+    z-index: 100;
+    mix-blend-mode: multiply;
+    height: 30%;
+}
+@media only screen and (max-width: 600px) {
+    #displayPage .back{
+        width: 9%;
+    }
+    #displayPage{
+        background-color: rgb(241, 211, 171);
+    }
+    #displayPage .background{
+        position: fixed;
+        width: 100%;
+        mix-blend-mode: multiply;
+        height: inherit;
+    }
+    .sketchfab-embed-wrapper{
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        z-index: -120;
+        height: 20;
+    }
+    .sketchfab-embed-wrapper iframe{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        box-shadow: 0 0 5px rgba(0, 0, 0,.4);
+    }
+    .backgroundBot{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 40%;
+        z-index: 100;
+        mix-blend-mode: multiply;
+    }
+}
