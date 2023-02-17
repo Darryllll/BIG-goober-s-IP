@@ -11,13 +11,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
     </head>
+    <div class="loading">
+        <lottie-player  id="login_animation" src="https://assets8.lottiefiles.com/packages/lf20_tsxbtrcu.json"  background="rgba(230, 172, 81, 0.00)"  speed="1"  style="width: 20%; height: 20%;"></lottie-player>
+    </div>
     <body id="commPage">
         <img class="background" id="CommBGTop" src="images/CommBGTop.png">
         <img id="CommBGBottom" src="images/CommBGBottom.png">
         <button class="back" onclick="parent.location='Lobby.html'">
             <img src="images/Back.png">
         </button>
-        <button onclick="window.location.href = 'Post.html';" class="CommsAdd">
+        <button onclick="window.location.href = 'Post.html';" class="CommsAdd" id="postbutton">
             <img src="images/CommPlus.png">
         </button>
         <div class="commBigSpace"></div>
@@ -25,12 +28,15 @@
         <div class="commContent">
             <p class="commUsername" id="cusername">cusername</p>
             <p class="commTag" id="tag">tag</p>
-            <h4 class="commCaption" id="title">title is very nice</h4>
-            <div id ="caption">caption is a vry long caption lalalalallalallallalalalalalalalalaallalalalalalalala hehe</div>
-            <div class="triangle-up"></div>
+            <h4 class="commCaption" id="title">title</h4>
+            <div id ="caption">caption</div>
+            <button onclick="upvote()" class="triangle-up"></button>
+            <p id="num">0</p>
         </div>
             <script src="script.js" defer></script>
+            <script src="lottie.js" defer></script>
             <script src="/jquery-3.6.3.js"></script>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     </body>

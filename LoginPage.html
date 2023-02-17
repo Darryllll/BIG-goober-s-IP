@@ -1,60 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motif login</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
-    <link rel="stylesheet" type="text/css" href="custom.css">
-    <link rel="icon" type="image/png" href="images/logo.png"/>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
-        </style>
-        
-    </head>
-    <body id="login_page">
-      <img class="loginLogo" src="images/logo.png">
-        <img class="background" id="login_background" src="images\loginBG.png">
-        <header>
-          
-            <h1 class="title">Welcome to Motif</h1>
-            <h3 id="login_page_h3"class="title">The Muggers' Point</h3>
-          
-        </header>
-        <section>
-            <div>
-                <input  class="login_insert" type="email" placeholder="email" id="login-email">
-                <input id="login-password" class="login_insert" type="password" placeholder="password">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+    </style>
+  </head>
+  <div class="loading">
+    <lottie-player  id="login_animation" src="https://assets8.lottiefiles.com/packages/lf20_tsxbtrcu.json"  background="rgba(230, 172, 81, 0.00)"  speed="1"  style="width: 20%; height: 20%;"></lottie-player>
+  </div>
+  <body id="login_page">
+    <img class="loginLogo" src="images/logo.png" />
+    <img class="background" id="login_background" src="images\loginBG.png" />
+    <header>
+      <h1 class="title">Welcome to Motif</h1>
+      <h3 id="login_page_h3" class="title">The Muggers' Point</h3>
+    </header>
+    <section>
+      <div>
+        <input  class="login_insert" type="email" placeholder="email" id="login-email">
+        <input id="login-password" class="login_insert" type="password" placeholder="password">
+      </div>
+      <div class="button-container">
+        <button onclick="LoginPage_Login()" class="login_login_button" id="login_button">Login</button>
+      </div>
+      <a href="Lobby.html"></a>
+      <div class="login_or">
+        <div class="login_rectangle"></div>
+        <div class="login_rectangle"></div>
+      </div>
+      <p id="login_or">or</p>
+      <div class="button-container">
+        <button onclick="window.location.href = 'SignUp.html'; id=LoginPage_SignUp()" class="login_SignUp" id="signup_button">Sign up</button>
+      </div>
+      <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="errorModalLabel">Error</h5>
             </div>
-            <button onclick="LoginPage_Login()" class="login_login_button">Login</button>
-            <a href="Lobby.html"></a>
-            <div class="login_or">
-                <div class="login_rectangle"></div>
-                <div class="login_rectangle"></div>
+            <div class="modal-body" id="error-modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
-            <p id="login_or">or</p>
-            <button onclick="window.location.href = 'SignUp.html'; id=LoginPage_SignUp()" class="login_SignUp">Sign up</button>
-            <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="errorModalLabel">Error</h5>
-                    </div>
-                    <div class="modal-body" id="error-modal-body">
-                      
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </section>
-        <script src="script.js" defer></script>
-        <script src="/jquery-3.6.3.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-    </body>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js" defer></script>
+    <script src="/jquery-3.6.3.js"></script>
+    <script src="lottie.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</body>
 </html>
+
 

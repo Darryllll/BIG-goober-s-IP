@@ -12,8 +12,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
 </head>
+<div class="loading">
+    <lottie-player  id="login_animation" src="https://assets8.lottiefiles.com/packages/lf20_tsxbtrcu.json"  background="rgba(230, 172, 81, 0.00)"  speed="1"  style="width: 20%; height: 20%;"></lottie-player>
+</div>
 <body id="postPage">
-    <button class="postX" onclick="parent.location='Lobby.html'">
+    <button class="postX" onclick="parent.location='Lobby.html'" id="closebutton">
         <img src="images/X.png">
     </button>
     <section>
@@ -22,10 +25,12 @@
         <textarea class="postCapt" name="subject" placeholder="add caption" id="caption"></textarea>
         
     </section>
-    <button onclick="postSubmit()" type="button" class="postSubmit">submit</button>
+    <button onclick="postSubmit()" type="button" class="postSubmit" id="psubmitbutton">submit</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="script.js"></script>
+    <script src="lottie.js" defer></script>
     <script src="/jquery-3.6.3.js"></script>
 </body>
 </html>

@@ -11,7 +11,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
     </head>
+    <div class="loading">
+        <lottie-player  id="login_animation" src="https://assets8.lottiefiles.com/packages/lf20_tsxbtrcu.json"  background="rgba(230, 172, 81, 0.00)"  speed="1"  style="width: 20%; height: 20%;"></lottie-player>
+    </div>
     <body id="lobby_page">
+        
         <img src="images/lobbyBGTop.png" class="background"id="lobbyBGTop">
 
         <img src="images/lobbyBGBot.png" class="lobbyBGBot">
@@ -46,14 +50,14 @@
                 </div>
             </div>
         </div>
-        <button class="LobbySeason" onclick="parent.location='maintenance.html'">Study Season</button>
+        <button class="LobbySeason" onclick="parent.location='maintenance.html'" id="LobbySeason">Study Season</button>
         <button class="LobbyInven">
             <div>
                 <p id="LobbyInven-1">Welcome!</p>
                 <p id="LobbyInven0">username</p>
                 <p id="LobbyInven1">Level 0</p>
-                <p id="LobbyInven2">Time left till</p>
-                <p id="LobbyInven3">47hrs 28min</p>
+                <p id="LobbyInven2">Time left till O'levels</p>
+                <p class="LobbyInven3" id="countdown"></p>
             </div>
         </button>
         <img class="LobbyRoom" src="images/lobbyRoom.png">
@@ -63,7 +67,9 @@
             <img id="LobbyCoin" src="images/Coin.png">
         </div>
         <script src="script.js" defer></script>
+        <script src="lottie.js" defer></script>
         <script src="/jquery-3.6.3.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     </body>

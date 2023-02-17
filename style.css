@@ -258,6 +258,21 @@
         }
     
   }
+
+.loading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    left:0;
+    position: fixed;
+    width:100%;
+    height:100%;
+}
+
+.loading lottie-player{
+    width:20%;
+    height:20%;
+}
 /* ! ! ! Sign UP page ! ! ! */
 #SignUpBG{
     margin-left: -0.05%;
@@ -655,7 +670,7 @@
     font-size: 14px;
     font-weight: 300;
 }
-#LobbyInven3{
+.LobbyInven3{
     
     font-weight: 390;
     margin-left: 8%;

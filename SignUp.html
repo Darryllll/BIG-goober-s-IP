@@ -12,6 +12,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
     </head>
+    <div class="loading">
+      <lottie-player  id="login_animation" src="https://assets8.lottiefiles.com/packages/lf20_tsxbtrcu.json"  background="rgba(230, 172, 81, 0.00)"  speed="1"  style="width: 20%; height: 20%;"></lottie-player>
+    </div>
     <body id="SignUpPage">
         <img class="background" id="SignUpBG" src="images\SignUpPageBG.png">
         <a href="LoginPage.html">
@@ -38,7 +41,7 @@
                         <input id ="signUp-Password" type="password">
                     </div>
                 </div> 
-                <button onclick="submitButton()" type="submit" class="btn btn-primary">Submit</button>
+                <button onclick="submitButton()" type="submit" class="btn btn-primary" id="submitbutton">Submit</button>
                 <a href="LoginPage.html"></a>
                 <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -58,6 +61,8 @@
             </section>
             <script src="script.js" defer></script>
             <script src="/jquery-3.6.3.js"></script>
+            <script src="lottie.js" defer></script>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     </body>

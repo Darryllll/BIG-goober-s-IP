@@ -127,7 +127,7 @@
 
 function LoginPage_Login() {
   $(document).ready(function () {
-    const APIKEY = "63de48653bc6b255ed0c464c";
+    const APIKEY = "63ef3c6e478852088da683ab";
 
     let userName = $("#login-email").val();
     let userPass = $("#login-password").val();
@@ -146,7 +146,7 @@ function LoginPage_Login() {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-81b0.restdb.io/rest/login",
+      "url": "https://ipproject-f3a0.restdb.io/rest/login",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -191,10 +191,11 @@ function LoginPage_Login() {
 
 
 
+
 //for the sign up page
 function submitButton() {
   $(document).ready(function () {
-    const APIKEY = "63de48653bc6b255ed0c464c";
+    const APIKEY = "63ef3c6e478852088da683ab";
     let userName = $("#signUp-Email").val();
     let userPass = $("#signUp-Password").val();
     let userUname = $("#signUp-Username").val();
@@ -208,7 +209,7 @@ function submitButton() {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-81b0.restdb.io/rest/login",
+      "url": "https://ipproject-f3a0.restdb.io/rest/login ",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -251,7 +252,7 @@ function submitButton() {
       var postSettings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://ipproject-81b0.restdb.io/rest/login",
+        "url": "https://ipproject-f3a0.restdb.io/rest/login ",
         "method": "POST",
         "headers": {
           "content-type": "application/json",
@@ -276,12 +277,12 @@ function submitButton() {
 };
 /* for lobby page*/
 $(document).ready(function() {
-  const APIKEY = "63de48653bc6b255ed0c464c";
+  const APIKEY = "63ef3c6e478852088da683ab";
   let userEmail = sessionStorage.getItem("userEmail");
   let settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://ipproject-81b0.restdb.io/rest/login",
+    "url": "https://ipproject-f3a0.restdb.io/rest/login",
     "method": "GET",
     "headers": {
       "content-type": "application/json",
@@ -311,7 +312,7 @@ $(document).ready(function() {
 
 /* for posting page*/
 function postSubmit() {
-  const APIKEY = "63de48653bc6b255ed0c464c";
+  const APIKEY = "63ef3c6e478852088da683ab";
   let caption = $("#caption").val();
   let title = $("#title").val();
   let tag = $("#tag").val();
@@ -330,7 +331,7 @@ function postSubmit() {
   var captionsettings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://ipproject-81b0.restdb.io/rest/posts",
+    "url": "https://ipproject-f3a0.restdb.io/rest/posts",
     "method": "POST",
     "headers": {
       "content-type": "application/json",
@@ -361,7 +362,7 @@ function postSubmit() {
   });
 }
 $(document).ready(function() {
-  const APIKEY = "63de48653bc6b255ed0c464c";
+  const APIKEY = "63ef3c6e478852088da683ab";
   let cusername = sessionStorage.getItem("username");
   let caption = sessionStorage.getItem("caption");
   let title = sessionStorage.getItem("title");
@@ -369,7 +370,7 @@ $(document).ready(function() {
   let settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://ipproject-81b0.restdb.io/rest/posts",
+    "url": "https://ipproject-f3a0.restdb.io/rest/posts",
     "method": "GET",
     "headers": {
       "content-type": "application/json",
@@ -411,7 +412,7 @@ $(document).ready(function() {
   });
   var commUsername = document.querySelector("#cusername");
   if (cusername.length>0) {
-    commUsername.innerHTML = commUsername.innerHTML.replace("username",cusername)
+    commUsername.innerHTML = commUsername.innerHTML.replace("cusername",cusername)
   }
 
   var commTag = document.querySelector("#tag");
@@ -423,11 +424,76 @@ $(document).ready(function() {
   var commCaption = document.querySelector("#caption");
   commCaption.innerHTML = caption;
 })
-var username = sessionStorage.getItem("username");
-var lobbyUsername = document.querySelector("#LobbyInven0")
-if (username.length > 0) {
-  lobbyUsername.innerHTML = lobbyUsername.innerHTML.replace("username", username);
+
+
+function upvote() {
+  let buttonHome = document.querySelector('.triangle-up');
+  let countButtonHomeClicks = parseInt(localStorage.getItem('upvoteCount') || 0);
+  let countDisplay = document.getElementById('num');
+  let cusername = sessionStorage.getItem("username");
+
+  countDisplay.innerText = ` ${countButtonHomeClicks}`;
+
+  buttonHome.addEventListener('click', function() {
+    countButtonHomeClicks += 1;
+    localStorage.setItem('upvoteCount', countButtonHomeClicks);
+    countDisplay.innerText = ` ${countButtonHomeClicks}`;
+
+    const APIKEY = "63ef3c6e478852088da683ab";
+    let settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://ipproject-f3a0.restdb.io/rest/posts",
+      "method": "POST",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache",
+      },
+      "data": JSON.stringify({
+        "username": cusername,
+        "upvoteCount": countButtonHomeClicks
+      })
+    };
+
+    $.ajax(settings).done(function(response) {
+      console.log(response);
+    });
+
+    console.log(countButtonHomeClicks);
+  });
 }
+
+
+
+
+var countDownDate = new Date("Nov 8, 2023 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
 
 
 
