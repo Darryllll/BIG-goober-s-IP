@@ -4,3 +4,7 @@
 .btn{
     padding:0
 }
+.modal{
+    top: -10px;
+    color: rgba(137, 106, 73, 0.85);
+}

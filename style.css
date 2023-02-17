@@ -1484,14 +1484,14 @@ div.fixed {
     background-color: rgba(242, 161, 107, .3);
     mix-blend-mode: multiply;
     width: 84%;
-    height: 20%;
+    height: 30%;
     margin-left: 3%;
     font-size: 18px;
     border-radius: 10px;
     padding-left: 7%;
     text-align: left;
     font-weight: 500;
-    padding-bottom: 7%;
+    padding-bottom: 15%;
     padding-top: 5%;
 }
 .shopItemDetails p{
@@ -1506,8 +1506,9 @@ div.fixed {
     width: 60%;
     border-radius: 10px;
     padding: 0%;
-    height: 42%;
+    height: 49%;
     padding-left: 5%;
+    
 }
 .shopItemDetails div p{
     margin-left: 18%;
@@ -1515,8 +1516,9 @@ div.fixed {
 .shopItemCoin{
     position: relative;
     height: 20px;
-    top: -55%;
+    top: -135%;
 }
+
 @media only screen and (max-width: 600px) {
     .shopBG{
         position: fixed;
@@ -1601,7 +1603,7 @@ div.fixed {
     .shopItem{
         background-color: rgba(239, 198, 154, .85);
         width: 130px;
-        margin-left: 4%;
+        margin-left: 5%;
         border-radius: 10px;
         padding-bottom: 17px;
         padding-left: 10px;
@@ -1614,16 +1616,16 @@ div.fixed {
     .shopItemImg{
         position: relative;
         width: 90%;
-        height: 55%;
+        height: 45%;
         border-radius: 10px;
         margin-left: -5%;
-        margin-bottom: 0%;
+        margin-bottom: 4%;
     }
     .shopItemDetails{
         position: relative;
         background-color: rgba(242, 161, 107, .3);
         mix-blend-mode: multiply;
-        width: 84%;
+        width: 90%;
         height: 40%;
         font-size: 14px;
         border-radius: 10px;
@@ -1636,7 +1638,7 @@ div.fixed {
     }
     .shopItemDetails p{
         position: relative;
-        height: 65%;
+        height: 52%;
     }
     .shopItemDetails div{
         font-weight: 500;
@@ -1654,7 +1656,7 @@ div.fixed {
     .shopItemCoin{
         position: relative;
         height: 18px;
-        top: -13px;    
+        top: -28px;    
         left: 0%;
     }
 }
