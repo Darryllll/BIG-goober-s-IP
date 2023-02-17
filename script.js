@@ -493,8 +493,202 @@ var x = setInterval(function() {
 }, 1000);
 
 
+/*var modal = document.getElementById("myModal");
+var modalContent = document.querySelector("#myModal .modal-content");
+var btn1 = document.getElementById("shopb1");
+var btn2 = document.getElementById("shopb2");
+var span = document.getElementsByClassName("close")[0];
+var confirmBtn = document.querySelector(".confirm-button");
+
+function openModal(text) {
+  modalContent.innerHTML = "<p>" + text + "</p>";
+  modal.style.display = "block";
+}
+
+btn1.onclick = function() {
+  openModal("you are going to claim 'display plane model'");
+}
+
+btn2.onclick = function() {
+  openModal("you are going to claim 'display'");
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}*/
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("shopb1");
+var span = document.getElementsByClassName("close")[0];
+var confirmBtn = document.querySelector(".confirm-button")
+
+btn.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 
+var modal1 = document.getElementById("myModal1");
+var btn = document.getElementById("shopb2");
+var span1 = document.getElementsByClassName("close")[0];
+var confirmBtn1 = document.querySelector(".confirm-button")
+
+btn.addEventListener("click", function() {
+  modal1.style.display = "block";
+});
+
+span1.onclick = function() {
+  modal1.style.display = "none";
+};
+
+confirmBtn1.onclick = function() {
+  modal1.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+};
+
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("shopb3");
+var noBtn = document.querySelector(".no-button");
+var confirmBtn = document.querySelector(".confirm-button")
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+noBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("shopb4");
+var noBtn = document.querySelector(".no-button");
+var confirmBtn = document.querySelector(".confirm-button")
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+noBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("shopb5");
+var noBtn = document.querySelector(".no-button");
+var confirmBtn = document.querySelector(".confirm-button")
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+noBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("shopb6");
+var noBtn = document.querySelector(".no-button");
+var confirmBtn = document.querySelector(".confirm-button")
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+noBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("shopb7");
+var noBtn = document.querySelector(".no-button");
+var confirmBtn = document.querySelector(".confirm-button")
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+noBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+confirmBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 /*$(document).ready(function() {
   const APIKEY = "63de48653bc6b255ed0c464c";
   let cusername = sessionStorage.getItem("username");

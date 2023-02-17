@@ -7,6 +7,8 @@
     <title>Motif Shop</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/png" href="images/logo.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="custom.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
     </style>
@@ -27,8 +29,7 @@
         </div>
         <div id="shopEmpty">     dededede    </div>
         <div class="shopItems">
-            <button class="shopItem">
-                
+            <button class="shopItem" id="shopb1">
                 <img class="shopItemImg"src="images/plane.png">
                 <div class="shopItemDetails">
                     <p>Display Plane Model</p>
@@ -38,7 +39,7 @@
                     </div>
                 </div>
             </button>
-            <button class="shopItem">
+            <button class="shopItem" id="shopb2">
                 
                 <img class="shopItemImg"src="images/sofa.png">
                 <div class="shopItemDetails">
@@ -49,7 +50,7 @@
                     </div>
                 </div>
             </button>
-            <button class="shopItem">
+            <button class="shopItem" id="shopb3">
                 
                 <img class="shopItemImg"src="images/niceTable.png">
                 <div class="shopItemDetails">
@@ -60,7 +61,7 @@
                     </div>
                 </div>
             </button>
-            <button class="shopItem">
+            <button class="shopItem" id="shopb4">
                 
                 <img class="shopItemImg"src="images/beanBag.png">
                 <div class="shopItemDetails">
@@ -71,7 +72,7 @@
                     </div>
                 </div>
             </button>
-            <button class="shopItem">
+            <button class="shopItem" id="shopb5">
                 
                 <img class="shopItemImg"src="images/drawer.png">
                 <div class="shopItemDetails">
@@ -82,7 +83,7 @@
                     </div>
                 </div>
             </button>
-            <button class="shopItem">
+            <button class="shopItem" id="shopb6">
                 
                 <img class="shopItemImg"src="images/curtain.png">
                 <div class="shopItemDetails">
@@ -94,7 +95,7 @@
                 </div>
                 
             </button>
-            <button class="shopItem">
+            <button class="shopItem" id="shopb7">
                 
                 <img class="shopItemImg"src="images/poster.png">
                 <div class="shopItemDetails">
@@ -104,9 +105,41 @@
                         <img src="images/coin.png" class="shopItemCoin">
                     </div>
                 </div>
-                
-            </button>
             
+            </button>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                  <p>you are going to claim "display plane model"</p>
+
+                  <div class="button-container">
+                    <button class="confirm-button">Confirm</button>
+                  </div>
+                </div>
+              
+            </div>
+            <div id="myModal1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                  <p>you are going to claim "display"</p>
+                  
+                  <div class="button-container">
+                    <button class="confirm-button">Confirm</button>
+                  </div>
+                </div>
+              
+            </div>
+              
         </div>
+        <script src="script.js" defer></script>
+        <script src="/jquery-3.6.3.js"></script>
+        <script src="lottie.js" defer></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     </body>
 </html>
